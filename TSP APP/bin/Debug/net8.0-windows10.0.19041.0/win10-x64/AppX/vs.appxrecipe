@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\visti\source\repos\TSP APP\TSP APP\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-07-10T15:41:17.264</Modified>
+      <Modified>2024-07-10T17:40:19.689</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\visti\source\repos\TSP APP\TSP APP\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-07-10T14:31:52.762</Modified>
+      <Modified>2024-07-10T17:38:21.113</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\visti\source\repos\TSP APP\TSP APP\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TSP APP.runtimeconfig.json">
       <PackagePath>TSP APP.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\visti\source\repos\TSP APP\TSP APP\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TSP APP.dll">
       <PackagePath>TSP APP.dll</PackagePath>
-      <Modified>2024-07-10T15:41:17.001</Modified>
+      <Modified>2024-07-10T17:40:19.457</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\visti\source\repos\TSP APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>TSP APP.exe</PackagePath>
-      <Modified>2024-07-10T15:41:17.005</Modified>
+      <Modified>2024-07-10T17:40:19.460</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\visti\source\repos\TSP APP\TSP APP\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -287,7 +287,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\visti\source\repos\TSP APP\TSP APP\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TSP APP.deps.json">
       <PackagePath>TSP APP.deps.json</PackagePath>
-      <Modified>2024-07-10T14:31:52.411</Modified>
+      <Modified>2024-07-10T17:38:21.021</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\visti\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

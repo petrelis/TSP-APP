@@ -1,23 +1,30 @@
-﻿using Microsoft.Maui.Graphics;
-
-namespace TSP_APP
+﻿namespace TSP_APP
 {
     public partial class MainPage : ContentPage
     {
         int count = 0;
+        List<Point> Points = new List<Point>();
 
         public MainPage()
         {
             InitializeComponent();
 
-            var drawable = new CoordinateAxisDrawable();
+            var drawable = new CoordinateAxisDrawable(Points);
             graphicsView.Drawable = drawable;
         }
 
         public class CoordinateAxisDrawable : IDrawable
         {
+            private List<Point> _points;
+
+            public CoordinateAxisDrawable(List<Point> points)
+            {
+                _points = points;
+            }
+
             public void Draw(ICanvas canvas, RectF dirtyRect)
             {
+                
                 canvas.StrokeColor = Colors.White;
                 canvas.StrokeSize = 2;
 
@@ -50,20 +57,31 @@ namespace TSP_APP
                 float PointOffsetXMultiplier = dirtyRect.Width / numberOfTicks;
                 float PointOffsetYMultiplier = dirtyRect.Height / numberOfTicks;
 
-                List<Point> points = new List<Point>();
-                List<Point> initPoints = [new Point(-3, -4), new Point(1, 2), new Point(-2, -1)];
-                foreach (var point in initPoints)
+                List<Point> pointsDrawn = new List<Point>();
+                foreach (var point in _points)
                 {
                     Point pointToDraw = new Point(point.X * PointOffsetXMultiplier + axisXMidPoint, -point.Y * PointOffsetYMultiplier + axisYMidPoint);
                     canvas.DrawCircle(pointToDraw, 3.0);
-                    points.Add(pointToDraw);
+                    pointsDrawn.Add(pointToDraw);
                 }
 
-                for (int i = 0; i < points.Count-1; i++)
+                for (int i = 0; i < pointsDrawn.Count-1; i++)
                 {
-                    canvas.DrawLine(points[i], points[i+1]);
+                    canvas.DrawLine(pointsDrawn[i], pointsDrawn[i+1]);
                 }
             }
+        }
+        async void RandomPointBtnClicked(object sender, EventArgs args)
+        {
+            Points.Clear();
+            Random rnd = new Random();
+            for (int i = 0; i < 5; i++)
+            {
+                float x = 5 - rnd.NextSingle() * 10;
+                float y = 5 - rnd.NextSingle() * 10;
+                Points.Add(new Point(x, y));
+            }
+            graphicsView.Invalidate();
         }
 
     }

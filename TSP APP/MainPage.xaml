@@ -3,11 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TSP_APP.MainPage">
 
-    <Grid>
+    <VerticalStackLayout Padding="30" Spacing="50">
         <GraphicsView x:Name="graphicsView"
                       Drawable="{Binding Drawable}"
-                      HeightRequest="900"
-                      WidthRequest="900" />
-    </Grid>
+                      HeightRequest="750"
+                      WidthRequest="750" />
+
+        <Button Text="Draw Random Points"
+                x:Name="RandomPointBtn"
+                HorizontalOptions="Center"
+                Clicked="RandomPointBtnClicked" />
+    </VerticalStackLayout>
 
 </ContentPage>
