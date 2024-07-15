@@ -1,1 +1,3 @@
-C:\Users\visti\source\repos\TSP APP\TSP APP\TSP APP.csproj;x64
+C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\TSP Algorithms.csproj;neutral
+C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\TSP Algorithms.csproj;neutral
+C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\TSP APP.csproj;x64

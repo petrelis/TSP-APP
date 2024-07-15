@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSP APP", "TSP APP\TSP APP.csproj", "{EDC28599-28A3-481F-8B07-3DBB9660D4DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TSP APP", "TSP APP\TSP APP.csproj", "{EDC28599-28A3-481F-8B07-3DBB9660D4DE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{08E5CF98-C2B0-4959-91F1-0FFCA99D0821} = {08E5CF98-C2B0-4959-91F1-0FFCA99D0821}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSP Algorithms", "TSP Algorithms\TSP Algorithms.csproj", "{08E5CF98-C2B0-4959-91F1-0FFCA99D0821}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +22,10 @@ Global
 		{EDC28599-28A3-481F-8B07-3DBB9660D4DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDC28599-28A3-481F-8B07-3DBB9660D4DE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EDC28599-28A3-481F-8B07-3DBB9660D4DE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{08E5CF98-C2B0-4959-91F1-0FFCA99D0821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08E5CF98-C2B0-4959-91F1-0FFCA99D0821}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08E5CF98-C2B0-4959-91F1-0FFCA99D0821}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08E5CF98-C2B0-4959-91F1-0FFCA99D0821}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

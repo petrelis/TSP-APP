@@ -1,30 +1,41 @@
-﻿namespace TSP_APP
+﻿using TSP_Algorithms;
+
+namespace TSP_APP
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
         List<Point> Points = new List<Point>();
+        CoordinateAxisDrawable drawable;
 
         public MainPage()
         {
             InitializeComponent();
 
-            var drawable = new CoordinateAxisDrawable(Points);
+            drawable = new CoordinateAxisDrawable(Points);
             graphicsView.Drawable = drawable;
         }
 
         public class CoordinateAxisDrawable : IDrawable
         {
             private List<Point> _points;
+            private bool _drawLines;
+            private Point _homePoint;
 
             public CoordinateAxisDrawable(List<Point> points)
             {
                 _points = points;
             }
 
+            public void UpdatePoints(List<Point> points, bool drawLines, Point homePoint)
+            {
+                _points = points;
+                _drawLines = drawLines;
+                _homePoint = homePoint;
+            }
+
             public void Draw(ICanvas canvas, RectF dirtyRect)
             {
-                
+
                 canvas.StrokeColor = Colors.White;
                 canvas.StrokeSize = 2;
 
@@ -52,36 +63,106 @@
                     canvas.DrawString($"{numberOfTicks / 2 - i}", dirtyRect.Width / 2 + tickLength + 5, y, HorizontalAlignment.Left);
                 }
 
-                double axisXMidPoint = dirtyRect.Width / 2;
-                double axisYMidPoint = dirtyRect.Height / 2;
+                float axisXMidPoint = dirtyRect.Width / 2;
+                float axisYMidPoint = dirtyRect.Height / 2;
                 float PointOffsetXMultiplier = dirtyRect.Width / numberOfTicks;
                 float PointOffsetYMultiplier = dirtyRect.Height / numberOfTicks;
 
                 List<Point> pointsDrawn = new List<Point>();
                 foreach (var point in _points)
                 {
-                    Point pointToDraw = new Point(point.X * PointOffsetXMultiplier + axisXMidPoint, -point.Y * PointOffsetYMultiplier + axisYMidPoint);
+                    Point pointToDraw = new Point(point.X * PointOffsetXMultiplier + axisXMidPoint, point.Y * PointOffsetYMultiplier + axisYMidPoint);
                     canvas.DrawCircle(pointToDraw, 3.0);
                     pointsDrawn.Add(pointToDraw);
                 }
 
-                for (int i = 0; i < pointsDrawn.Count-1; i++)
+                if (_points.Count > 0)
                 {
-                    canvas.DrawLine(pointsDrawn[i], pointsDrawn[i+1]);
+                    canvas.StrokeColor = Colors.Red;
+                    Point homePointToDraw = new Point(_homePoint.X * PointOffsetXMultiplier + axisXMidPoint, _homePoint.Y * PointOffsetYMultiplier + axisYMidPoint);
+                    canvas.DrawCircle(homePointToDraw, 3.0);
+                }
+
+                if (_drawLines)
+                {
+                    canvas.StrokeColor = Colors.Blue;
+
+                    for (int i = 0; i < pointsDrawn.Count - 1; i++)
+                    {
+                        canvas.DrawLine(pointsDrawn[i], pointsDrawn[i + 1]);
+                    }
                 }
             }
         }
-        async void RandomPointBtnClicked(object sender, EventArgs args)
+        void RandomPointBtnClicked(object sender, EventArgs args)
         {
             Points.Clear();
-            Random rnd = new Random();
-            for (int i = 0; i < 5; i++)
+
+            for (int i = 0; i < 9; i++)
             {
-                float x = 5 - rnd.NextSingle() * 10;
-                float y = 5 - rnd.NextSingle() * 10;
-                Points.Add(new Point(x, y));
+                Points.Add(Algorithms.GenerateRandomPoint(5));
             }
+
+            drawable.UpdatePoints(Points, false, Points[0]);
             graphicsView.Invalidate();
+            BruteForcePathBtn.IsEnabled = true;
+            ClosestNeighbourPathBtn.IsEnabled = true;
+            UpdateLabels();
+        }
+
+        void BruteForcePathBtnClicked(object sender, EventArgs args)
+        {
+            var watch = new System.Diagnostics.Stopwatch();
+            watch.Start();
+
+            var bruteForcePath = Algorithms.BruteForce(Points);
+
+            watch.Stop();
+            var timeElapsed = watch.ElapsedMilliseconds;
+
+            drawable.UpdatePoints(bruteForcePath.points, true, Points[0]);
+            graphicsView.Invalidate();
+            UpdateLabels(bruteForcePath.distance, bruteForcePath.points.Count, timeElapsed);
+        }
+
+        void ClosestNeighbourPathBtnClicked(Object sender, EventArgs args)
+        {
+            var watch = new System.Diagnostics.Stopwatch();
+            watch.Start();
+
+            var closesNeighbourPath = Algorithms.NearestNeighbour(Points);
+
+            watch.Stop();
+            var timeElapsed = watch.ElapsedMilliseconds;
+
+            drawable.UpdatePoints(closesNeighbourPath.points, true, Points[0]);
+            graphicsView.Invalidate();
+            UpdateLabels(closesNeighbourPath.distance, closesNeighbourPath.points.Count, timeElapsed);
+        }
+
+        void ClearPointsBtnClicked(object sender, EventArgs args)
+        {
+            BruteForcePathBtn.IsEnabled = false;
+            ClosestNeighbourPathBtn.IsEnabled = false;
+            UpdateLabels();
+            Points.Clear();
+            drawable.UpdatePoints(Points, false, new Point(0,0));
+            graphicsView.Invalidate();
+
+        }
+
+        void UpdateLabels()
+        {
+            DistanceLbl.Text = "Total Distance: 0";
+            PointCountLbl.Text = "Points Drawn: 0";
+            TimeElapsedLbl.Text = "Time Elapsed: 0ms";
+        }
+
+        void UpdateLabels(float distance, int pointCount, long timeElapsed)
+        {
+            DistanceLbl.Text = $"Total Distance: {distance}";
+            PointCountLbl.Text = $"Points Drawn: {pointCount - 1}";
+            TimeElapsedLbl.Text = $"Time Elapsed: {timeElapsed}ms";
         }
 
     }

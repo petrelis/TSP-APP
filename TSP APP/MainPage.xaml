@@ -3,16 +3,59 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TSP_APP.MainPage">
 
-    <VerticalStackLayout Padding="30" Spacing="50">
-        <GraphicsView x:Name="graphicsView"
-                      Drawable="{Binding Drawable}"
-                      HeightRequest="750"
-                      WidthRequest="750" />
 
-        <Button Text="Draw Random Points"
-                x:Name="RandomPointBtn"
-                HorizontalOptions="Center"
-                Clicked="RandomPointBtnClicked" />
+    <VerticalStackLayout Padding="30"
+                         Spacing="30">
+
+        <HorizontalStackLayout Padding="30"
+                               Spacing="30"
+                               HorizontalOptions="Center">
+
+            <GraphicsView x:Name="graphicsView"
+                          Drawable="{Binding Drawable}"
+                          MinimumHeightRequest="300"
+                          MinimumWidthRequest="300"
+                          HeightRequest="250"
+                          WidthRequest="250"
+                           />
+
+            <VerticalStackLayout Padding="30"
+                                 Spacing="30">
+                <Label x:Name="DistanceLbl"
+                       Text="Total Distance: 0" />
+
+                <Label x:Name="PointCountLbl"
+                       Text="Points Drawn: 0" />
+
+                <Label x:Name="TimeElapsedLbl"
+                       Text="Time Elapsed: 0ms" />
+            </VerticalStackLayout>
+
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Padding="30"
+                               Spacing="30"
+                               HorizontalOptions="Center">
+
+            <Button Text="Draw Random Points"
+                    x:Name="RandomPointBtn"
+                    Clicked="RandomPointBtnClicked" />
+
+            <Button Text="Brute Force Path"
+                    x:Name="BruteForcePathBtn"
+                    IsEnabled="False"
+                    Clicked="BruteForcePathBtnClicked" />
+
+            <Button Text="Nearest Neighbour Path"
+                    x:Name="ClosestNeighbourPathBtn"
+                    IsEnabled="False"
+                    Clicked="ClosestNeighbourPathBtnClicked" />
+
+            <Button Text="Clear Points"
+                    x:Name="ClearPointsBtn"
+                    Clicked="ClearPointsBtnClicked" />
+
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 
 </ContentPage>
