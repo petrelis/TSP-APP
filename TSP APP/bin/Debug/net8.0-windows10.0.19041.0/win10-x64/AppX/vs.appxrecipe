@@ -29,29 +29,29 @@
     <AppXManifest Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-07-15T08:51:30.345</Modified>
+      <Modified>2024-07-17T09:46:32.950</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-07-11T08:12:17.560</Modified>
+      <Modified>2024-07-17T09:16:34.109</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TSP APP.runtimeconfig.json">
       <PackagePath>TSP APP.runtimeconfig.json</PackagePath>
-      <Modified>2024-07-11T08:12:17.398</Modified>
+      <Modified>2024-07-16T12:25:17.368</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TSP APP.dll">
       <PackagePath>TSP APP.dll</PackagePath>
-      <Modified>2024-07-15T08:51:28.236</Modified>
+      <Modified>2024-07-17T09:46:32.320</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\bin\Debug\net8.0-windows10.0.19041.0\TSP Algorithms.dll">
       <PackagePath>TSP Algorithms.dll</PackagePath>
-      <Modified>2024-07-13T22:02:57.691</Modified>
+      <Modified>2024-07-17T09:16:18.576</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>TSP APP.exe</PackagePath>
-      <Modified>2024-07-15T08:51:28.350</Modified>
+      <Modified>2024-07-17T09:46:32.326</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -59,239 +59,239 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2024-07-11T07:30:12.625</Modified>
+      <Modified>2024-07-16T12:25:03.323</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2024-07-11T07:30:12.626</Modified>
+      <Modified>2024-07-16T12:25:03.358</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2024-07-11T07:30:12.627</Modified>
+      <Modified>2024-07-16T12:25:03.386</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2024-07-11T07:30:12.628</Modified>
+      <Modified>2024-07-16T12:25:03.433</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2024-07-11T07:30:12.629</Modified>
+      <Modified>2024-07-16T12:25:03.637</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
-      <Modified>2024-07-11T07:30:12.574</Modified>
+      <Modified>2024-07-11T07:30:09.253</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
-      <Modified>2024-07-11T07:30:12.576</Modified>
+      <Modified>2024-07-11T07:30:09.255</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2024-07-11T07:31:47.596</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.583</Modified>
+      <Modified>2024-07-16T12:25:07.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.583</Modified>
+      <Modified>2024-07-16T12:25:07.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.583</Modified>
+      <Modified>2024-07-16T12:25:07.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.582</Modified>
+      <Modified>2024-07-16T12:25:07.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.582</Modified>
+      <Modified>2024-07-16T12:25:07.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.591</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.591</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.590</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.591</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.590</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.593</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.592</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.591</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.592</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.592</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.595</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.595</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.595</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.595</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.594</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.594</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.594</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.593</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.593</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.593</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.586</Modified>
+      <Modified>2024-07-16T12:25:07.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.586</Modified>
+      <Modified>2024-07-16T12:25:07.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.585</Modified>
+      <Modified>2024-07-16T12:25:07.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.585</Modified>
+      <Modified>2024-07-16T12:25:07.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.585</Modified>
+      <Modified>2024-07-16T12:25:07.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.588</Modified>
+      <Modified>2024-07-16T12:25:07.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.588</Modified>
+      <Modified>2024-07-16T12:25:07.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.587</Modified>
+      <Modified>2024-07-16T12:25:07.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.587</Modified>
+      <Modified>2024-07-16T12:25:07.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.587</Modified>
+      <Modified>2024-07-16T12:25:07.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.590</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.589</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.589</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.589</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.588</Modified>
+      <Modified>2024-07-16T12:25:07.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.584</Modified>
+      <Modified>2024-07-16T12:25:07.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.584</Modified>
+      <Modified>2024-07-16T12:25:07.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.584</Modified>
+      <Modified>2024-07-16T12:25:07.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.584</Modified>
+      <Modified>2024-07-16T12:25:07.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.584</Modified>
+      <Modified>2024-07-16T12:25:07.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.582</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.582</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.581</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.581</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2024-07-11T07:31:47.581</Modified>
+      <Modified>2024-07-16T12:25:07.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TSP APP.deps.json">
       <PackagePath>TSP APP.deps.json</PackagePath>
-      <Modified>2024-07-11T08:12:17.316</Modified>
+      <Modified>2024-07-17T09:16:33.876</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

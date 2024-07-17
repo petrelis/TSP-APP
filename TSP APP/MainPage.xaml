@@ -5,33 +5,40 @@
 
 
     <VerticalStackLayout Padding="30"
-                         Spacing="30">
+                         Spacing="30"
+                         VerticalOptions="CenterAndExpand"
+                         HorizontalOptions="CenterAndExpand">
 
-        <HorizontalStackLayout Padding="30"
-                               Spacing="30"
-                               HorizontalOptions="Center">
-
+        <HorizontalStackLayout HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="CenterAndExpand">
             <GraphicsView x:Name="graphicsView"
                           Drawable="{Binding Drawable}"
-                          MinimumHeightRequest="300"
-                          MinimumWidthRequest="300"
-                          HeightRequest="250"
-                          WidthRequest="250"
-                           />
+                          MinimumHeightRequest="150"
+                          MinimumWidthRequest="150"
+                          VerticalOptions="CenterAndExpand"
+                          HorizontalOptions="CenterAndExpand"/>
 
             <VerticalStackLayout Padding="30"
                                  Spacing="30">
+                <Entry x:Name="NumOfPointsEntry"
+                       Placeholder="Number of points to draw"
+                       TextChanged="OnNumOfPointsEntryChanged"
+                       Completed="OnNumOfPointsEntryCompleted" />
+
                 <Label x:Name="DistanceLbl"
                        Text="Total Distance: 0" />
 
                 <Label x:Name="PointCountLbl"
                        Text="Points Drawn: 0" />
 
-                <Label x:Name="TimeElapsedLbl"
-                       Text="Time Elapsed: 0ms" />
-            </VerticalStackLayout>
+                <Label x:Name="TicksElapsedLbl"
+                       Text="Ticks Elapsed: 0" />
 
+                <Label x:Name="TimeElapsedLbl"
+                       Text="Miliseconds Elapsed: 0" />
+            </VerticalStackLayout>
         </HorizontalStackLayout>
+
 
         <HorizontalStackLayout Padding="30"
                                Spacing="30"
@@ -39,12 +46,14 @@
 
             <Button Text="Draw Random Points"
                     x:Name="RandomPointBtn"
-                    Clicked="RandomPointBtnClicked" />
+                    Clicked="RandomPointBtnClicked"
+                    IsEnabled="False" />
 
             <Button Text="Brute Force Path"
                     x:Name="BruteForcePathBtn"
                     IsEnabled="False"
-                    Clicked="BruteForcePathBtnClicked" />
+                    Clicked="BruteForcePathBtnClicked"
+                    ToolTipProperties.Text="If number of points is larger than 10, path generation will take a very long time" />
 
             <Button Text="Nearest Neighbour Path"
                     x:Name="ClosestNeighbourPathBtn"

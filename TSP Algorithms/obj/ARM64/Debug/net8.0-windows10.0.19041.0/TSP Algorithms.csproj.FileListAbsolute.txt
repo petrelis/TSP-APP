@@ -1,0 +1,13 @@
+C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\bin\ARM64\Debug\net8.0-windows10.0.19041.0\TSP Algorithms.deps.json
+C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\bin\ARM64\Debug\net8.0-windows10.0.19041.0\TSP Algorithms.dll
+C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\bin\ARM64\Debug\net8.0-windows10.0.19041.0\TSP Algorithms.pdb
+C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\obj\ARM64\Debug\net8.0-windows10.0.19041.0\TSP Algorithms.csproj.AssemblyReference.cache
+C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\obj\ARM64\Debug\net8.0-windows10.0.19041.0\TSP Algorithms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\obj\ARM64\Debug\net8.0-windows10.0.19041.0\TSP Algorithms.AssemblyInfoInputs.cache
+C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\obj\ARM64\Debug\net8.0-windows10.0.19041.0\TSP Algorithms.AssemblyInfo.cs
+C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\obj\ARM64\Debug\net8.0-windows10.0.19041.0\TSP Algorithms.csproj.CoreCompileInputs.cache
+C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\obj\ARM64\Debug\net8.0-windows10.0.19041.0\TSP Algorithms.sourcelink.json
+C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\obj\ARM64\Debug\net8.0-windows10.0.19041.0\TSP Algorithms.dll
+C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\obj\ARM64\Debug\net8.0-windows10.0.19041.0\refint\TSP Algorithms.dll
+C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\obj\ARM64\Debug\net8.0-windows10.0.19041.0\TSP Algorithms.pdb
+C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\obj\ARM64\Debug\net8.0-windows10.0.19041.0\ref\TSP Algorithms.dll

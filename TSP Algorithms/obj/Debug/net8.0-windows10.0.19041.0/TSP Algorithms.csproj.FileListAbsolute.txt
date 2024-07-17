@@ -11,3 +11,6 @@ C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\obj\Debug\net8.0-win
 C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\obj\Debug\net8.0-windows10.0.19041.0\refint\TSP Algorithms.dll
 C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\obj\Debug\net8.0-windows10.0.19041.0\TSP Algorithms.pdb
 C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\obj\Debug\net8.0-windows10.0.19041.0\ref\TSP Algorithms.dll
+C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\bin\Debug\net8.0-android\android-arm64\Debug\net8.0-windows10.0.19041.0\TSP Algorithms.deps.json
+C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\bin\Debug\net8.0-android\android-arm64\Debug\net8.0-windows10.0.19041.0\TSP Algorithms.dll
+C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\bin\Debug\net8.0-android\android-arm64\Debug\net8.0-windows10.0.19041.0\TSP Algorithms.pdb

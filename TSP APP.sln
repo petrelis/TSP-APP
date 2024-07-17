@@ -8,24 +8,36 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TSP APP", "TSP APP\TSP APP.
 		{08E5CF98-C2B0-4959-91F1-0FFCA99D0821} = {08E5CF98-C2B0-4959-91F1-0FFCA99D0821}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSP Algorithms", "TSP Algorithms\TSP Algorithms.csproj", "{08E5CF98-C2B0-4959-91F1-0FFCA99D0821}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TSP Algorithms", "TSP Algorithms\TSP Algorithms.csproj", "{08E5CF98-C2B0-4959-91F1-0FFCA99D0821}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM64 = Debug|ARM64
 		Release|Any CPU = Release|Any CPU
+		Release|ARM64 = Release|ARM64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{EDC28599-28A3-481F-8B07-3DBB9660D4DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EDC28599-28A3-481F-8B07-3DBB9660D4DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDC28599-28A3-481F-8B07-3DBB9660D4DE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{EDC28599-28A3-481F-8B07-3DBB9660D4DE}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{EDC28599-28A3-481F-8B07-3DBB9660D4DE}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{EDC28599-28A3-481F-8B07-3DBB9660D4DE}.Debug|ARM64.Deploy.0 = Debug|Any CPU
 		{EDC28599-28A3-481F-8B07-3DBB9660D4DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDC28599-28A3-481F-8B07-3DBB9660D4DE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EDC28599-28A3-481F-8B07-3DBB9660D4DE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{EDC28599-28A3-481F-8B07-3DBB9660D4DE}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{EDC28599-28A3-481F-8B07-3DBB9660D4DE}.Release|ARM64.Build.0 = Release|Any CPU
+		{EDC28599-28A3-481F-8B07-3DBB9660D4DE}.Release|ARM64.Deploy.0 = Release|Any CPU
 		{08E5CF98-C2B0-4959-91F1-0FFCA99D0821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{08E5CF98-C2B0-4959-91F1-0FFCA99D0821}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08E5CF98-C2B0-4959-91F1-0FFCA99D0821}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{08E5CF98-C2B0-4959-91F1-0FFCA99D0821}.Debug|ARM64.Build.0 = Debug|ARM64
 		{08E5CF98-C2B0-4959-91F1-0FFCA99D0821}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08E5CF98-C2B0-4959-91F1-0FFCA99D0821}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08E5CF98-C2B0-4959-91F1-0FFCA99D0821}.Release|ARM64.ActiveCfg = Release|ARM64
+		{08E5CF98-C2B0-4959-91F1-0FFCA99D0821}.Release|ARM64.Build.0 = Release|ARM64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

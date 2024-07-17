@@ -5,6 +5,7 @@ namespace TSP_APP
     public partial class MainPage : ContentPage
     {
         List<Point> Points = new List<Point>();
+        int NumOfPoints = 0;
         CoordinateAxisDrawable drawable;
 
         public MainPage()
@@ -98,7 +99,7 @@ namespace TSP_APP
         {
             Points.Clear();
 
-            for (int i = 0; i < 9; i++)
+            for (int i = 0; i < NumOfPoints; i++)
             {
                 Points.Add(Algorithms.GenerateRandomPoint(5));
             }
@@ -119,13 +120,14 @@ namespace TSP_APP
 
             watch.Stop();
             var timeElapsed = watch.ElapsedMilliseconds;
+            var ticksElapsed = watch.ElapsedTicks;
 
             drawable.UpdatePoints(bruteForcePath.points, true, Points[0]);
             graphicsView.Invalidate();
-            UpdateLabels(bruteForcePath.distance, bruteForcePath.points.Count, timeElapsed);
+            UpdateLabels(bruteForcePath.distance, bruteForcePath.points.Count, timeElapsed, ticksElapsed);
         }
 
-        void ClosestNeighbourPathBtnClicked(Object sender, EventArgs args)
+        void ClosestNeighbourPathBtnClicked(object sender, EventArgs args)
         {
             var watch = new System.Diagnostics.Stopwatch();
             watch.Start();
@@ -134,10 +136,11 @@ namespace TSP_APP
 
             watch.Stop();
             var timeElapsed = watch.ElapsedMilliseconds;
+            var ticksElapsed = watch.ElapsedTicks;
 
             drawable.UpdatePoints(closesNeighbourPath.points, true, Points[0]);
             graphicsView.Invalidate();
-            UpdateLabels(closesNeighbourPath.distance, closesNeighbourPath.points.Count, timeElapsed);
+            UpdateLabels(closesNeighbourPath.distance, closesNeighbourPath.points.Count, timeElapsed, ticksElapsed);
         }
 
         void ClearPointsBtnClicked(object sender, EventArgs args)
@@ -146,7 +149,7 @@ namespace TSP_APP
             ClosestNeighbourPathBtn.IsEnabled = false;
             UpdateLabels();
             Points.Clear();
-            drawable.UpdatePoints(Points, false, new Point(0,0));
+            drawable.UpdatePoints(Points, false, new Point(0, 0));
             graphicsView.Invalidate();
 
         }
@@ -155,14 +158,39 @@ namespace TSP_APP
         {
             DistanceLbl.Text = "Total Distance: 0";
             PointCountLbl.Text = "Points Drawn: 0";
+            TicksElapsedLbl.Text = "Ticks Elapsed: 0";
             TimeElapsedLbl.Text = "Time Elapsed: 0ms";
         }
 
-        void UpdateLabels(float distance, int pointCount, long timeElapsed)
+        void UpdateLabels(float distance, int pointCount, long timeElapsed, long ticksElapsed)
         {
-            DistanceLbl.Text = $"Total Distance: {distance}";
+            DistanceLbl.Text = $"Total Distance: {distance:0.00}";
             PointCountLbl.Text = $"Points Drawn: {pointCount - 1}";
-            TimeElapsedLbl.Text = $"Time Elapsed: {timeElapsed}ms";
+            TicksElapsedLbl.Text = $"Ticks Elapsed: {ticksElapsed}";
+            TimeElapsedLbl.Text = $"Miliseconds Elapsed: {timeElapsed}";
+        }
+
+        void OnNumOfPointsEntryChanged(object sender, EventArgs e)
+        {
+            int num = 0;
+            if (int.TryParse(NumOfPointsEntry.Text, out num))
+            {
+                NumOfPoints = num;
+                if (num > 2)
+                {
+                    RandomPointBtn.IsEnabled = true;
+                }
+                else RandomPointBtn.IsEnabled = false;
+            }
+            else
+            {
+                RandomPointBtn.IsEnabled = false;
+                BruteForcePathBtn.TextColor = Colors.White;
+            }
+        }
+
+        void OnNumOfPointsEntryCompleted(object sender, EventArgs e)
+        {
         }
 
     }

@@ -18,3 +18,5 @@ C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\obj\Debug\net8.0-mac
 C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\refint\TSP Algorithms.dll
 C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\TSP Algorithms.pdb
 C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\ref\TSP Algorithms.dll
+C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\bin\Debug\net8.0-android\android-arm64\Debug\net8.0-maccatalyst\TSP Algorithms.dll
+C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\bin\Debug\net8.0-android\android-arm64\Debug\net8.0-maccatalyst\TSP Algorithms.pdb

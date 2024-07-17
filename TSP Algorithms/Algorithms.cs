@@ -54,7 +54,7 @@
 
                 foreach (var perm in restPermutations)
                 {
-                    perm.Insert(0, p);
+                    perm.Add(p);
                     permutations.Add(perm);
                 }
             }
