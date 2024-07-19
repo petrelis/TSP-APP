@@ -8,7 +8,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TSP APP", "TSP APP\TSP APP.
 		{08E5CF98-C2B0-4959-91F1-0FFCA99D0821} = {08E5CF98-C2B0-4959-91F1-0FFCA99D0821}
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TSP Algorithms", "TSP Algorithms\TSP Algorithms.csproj", "{08E5CF98-C2B0-4959-91F1-0FFCA99D0821}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TSP_Algorithms", "TSP Algorithms\TSP_Algorithms.csproj", "{08E5CF98-C2B0-4959-91F1-0FFCA99D0821}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

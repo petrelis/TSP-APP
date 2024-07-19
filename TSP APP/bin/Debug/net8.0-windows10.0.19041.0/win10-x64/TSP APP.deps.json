@@ -12,6 +12,7 @@
           "Microsoft.Extensions.Logging.Debug": "8.0.0",
           "Microsoft.Maui.Controls": "8.0.40",
           "Microsoft.Maui.Controls.Compatibility": "8.0.40",
+          "TSP_Algorithms": "1.0.0",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.31"
         },
         "runtime": {
@@ -436,13 +437,13 @@
           }
         }
       },
-      "TSP Algorithms/1.0.0": {
+      "TSP_Algorithms/1.0.0": {
         "dependencies": {
           "Microsoft.Maui.Controls": "8.0.40",
           "Microsoft.Maui.Controls.Compatibility": "8.0.40"
         },
         "runtime": {
-          "TSP Algorithms.dll": {}
+          "TSP_Algorithms.dll": {}
         }
       }
     }
@@ -612,7 +613,7 @@
       "path": "microsoft.windowsappsdk/1.5.240311000",
       "hashPath": "microsoft.windowsappsdk.1.5.240311000.nupkg.sha512"
     },
-    "TSP Algorithms/1.0.0": {
+    "TSP_Algorithms/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -7698,9 +7698,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP Algorithms.csproj",
-      "projectName": "TSP Algorithms",
-      "projectPath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP Algorithms.csproj",
+      "projectUniqueName": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj",
+      "projectName": "TSP_Algorithms",
+      "projectPath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj",
       "packagesPath": "C:\\Users\\PetrasR-PC\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\obj\\",
       "projectStyle": "PackageReference",

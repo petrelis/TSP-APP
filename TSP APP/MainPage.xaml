@@ -4,67 +4,98 @@
              x:Class="TSP_APP.MainPage">
 
 
-    <VerticalStackLayout Padding="30"
-                         Spacing="30"
-                         VerticalOptions="CenterAndExpand"
-                         HorizontalOptions="CenterAndExpand">
+
+    <VerticalStackLayout x:Name="UsableWindow"
+                         Padding="10"
+                         Spacing="10"
+                         VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid HorizontalOptions="FillAndExpand"
+                  VerticalOptions="CenterAndExpand"
+                  Padding="15">
+                <GraphicsView x:Name="graphicsView"
+                              Drawable="{Binding Drawable}"
+                              VerticalOptions="CenterAndExpand"
+                              HorizontalOptions="FillAndExpand"
+                              SizeChanged="OnSizeChanged" />
+            </Grid>
+        </Grid>
 
         <HorizontalStackLayout HorizontalOptions="CenterAndExpand"
-                               VerticalOptions="CenterAndExpand">
-            <GraphicsView x:Name="graphicsView"
-                          Drawable="{Binding Drawable}"
-                          MinimumHeightRequest="150"
-                          MinimumWidthRequest="150"
-                          VerticalOptions="CenterAndExpand"
-                          HorizontalOptions="CenterAndExpand"/>
+                               x:Name="BottomSection">
+            <VerticalStackLayout Padding="10"
+                                 Spacing="10"
+                                 HorizontalOptions="Center">
 
-            <VerticalStackLayout Padding="30"
-                                 Spacing="30">
-                <Entry x:Name="NumOfPointsEntry"
-                       Placeholder="Number of points to draw"
-                       TextChanged="OnNumOfPointsEntryChanged"
-                       Completed="OnNumOfPointsEntryCompleted" />
+                <Button Text="Draw Random Points"
+                        x:Name="RandomPointBtn"
+                        Clicked="RandomPointBtnClicked"
+                        IsEnabled="False"
+                        FontSize="12"/>
+
+                <Button Text="Brute Force Path"
+                        x:Name="BruteForcePathBtn"
+                        IsEnabled="False"
+                        Clicked="BruteForcePathBtnClicked"
+                        ToolTipProperties.Text="If number of points is larger than 10, path generation will take a very long time"
+                        FontSize="12"/>
+
+                <Button Text="Nearest Neighbour Path"
+                        x:Name="ClosestNeighbourPathBtn"
+                        IsEnabled="False"
+                        Clicked="ClosestNeighbourPathBtnClicked"
+                        FontSize="12"/>
+
+                <Button Text="Clear Points"
+                        x:Name="ClearPointsBtn"
+                        Clicked="ClearPointsBtnClicked"
+                        FontSize="12"/>
+
+            </VerticalStackLayout>
+
+
+            <VerticalStackLayout Padding="10"
+                                 Spacing="15"
+                                 HorizontalOptions="Center">
+
+                <VerticalStackLayout>
+                    <Label Text="Points to draw" />
+                    <Entry x:Name="NumOfPointsEntry"
+                           Placeholder="0"
+                           HorizontalOptions="Fill"
+                           MaximumWidthRequest="150"
+                           TextChanged="OnNumOfPointsEntryChanged"
+                           Completed="OnNumOfPointsEntryCompleted" />
+                </VerticalStackLayout>
 
                 <Label x:Name="DistanceLbl"
-                       Text="Total Distance: 0" />
+                       Text="Total Distance: 0"
+                       FontSize="12"/>
 
                 <Label x:Name="PointCountLbl"
-                       Text="Points Drawn: 0" />
+                       Text="Points Drawn: 0"
+                       FontSize="12"/>
 
                 <Label x:Name="TicksElapsedLbl"
-                       Text="Ticks Elapsed: 0" />
+                       Text="Ticks Elapsed: 0"
+                       FontSize="12"/>
 
                 <Label x:Name="TimeElapsedLbl"
-                       Text="Miliseconds Elapsed: 0" />
+                       Text="Time Elapsed: 0"
+                       FontSize="12"/>
             </VerticalStackLayout>
         </HorizontalStackLayout>
-
-
-        <HorizontalStackLayout Padding="30"
-                               Spacing="30"
-                               HorizontalOptions="Center">
-
-            <Button Text="Draw Random Points"
-                    x:Name="RandomPointBtn"
-                    Clicked="RandomPointBtnClicked"
-                    IsEnabled="False" />
-
-            <Button Text="Brute Force Path"
-                    x:Name="BruteForcePathBtn"
-                    IsEnabled="False"
-                    Clicked="BruteForcePathBtnClicked"
-                    ToolTipProperties.Text="If number of points is larger than 10, path generation will take a very long time" />
-
-            <Button Text="Nearest Neighbour Path"
-                    x:Name="ClosestNeighbourPathBtn"
-                    IsEnabled="False"
-                    Clicked="ClosestNeighbourPathBtnClicked" />
-
-            <Button Text="Clear Points"
-                    x:Name="ClearPointsBtn"
-                    Clicked="ClearPointsBtnClicked" />
-
-        </HorizontalStackLayout>
     </VerticalStackLayout>
+
+
 
 </ContentPage>

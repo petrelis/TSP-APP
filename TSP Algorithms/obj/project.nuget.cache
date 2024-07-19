@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Tx1AnCLvTYM=",
+  "dgSpecHash": "OBbWd3tz0Zk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP Algorithms.csproj",
+  "projectFilePath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PetrasR-PC\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",
     "C:\\Users\\PetrasR-PC\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",

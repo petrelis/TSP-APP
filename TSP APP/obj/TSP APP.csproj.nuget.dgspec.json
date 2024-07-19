@@ -4,12 +4,12 @@
     "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP APP\\TSP APP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP Algorithms.csproj": {
+    "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP Algorithms.csproj",
-        "projectName": "TSP Algorithms",
-        "projectPath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP Algorithms.csproj",
+        "projectUniqueName": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj",
+        "projectName": "TSP_Algorithms",
+        "projectPath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj",
         "packagesPath": "C:\\Users\\PetrasR-PC\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\obj\\",
         "projectStyle": "PackageReference",
@@ -249,32 +249,32 @@
           "net8.0-android34.0": {
             "targetAlias": "net8.0-android",
             "projectReferences": {
-              "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP Algorithms.csproj": {
-                "projectPath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP Algorithms.csproj"
+              "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj": {
+                "projectPath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj"
               }
             }
           },
           "net8.0-ios17.2": {
             "targetAlias": "net8.0-ios",
             "projectReferences": {
-              "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP Algorithms.csproj": {
-                "projectPath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP Algorithms.csproj"
+              "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj": {
+                "projectPath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj"
               }
             }
           },
           "net8.0-maccatalyst17.2": {
             "targetAlias": "net8.0-maccatalyst",
             "projectReferences": {
-              "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP Algorithms.csproj": {
-                "projectPath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP Algorithms.csproj"
+              "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj": {
+                "projectPath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj"
               }
             }
           },
           "net8.0-windows10.0.19041": {
             "targetAlias": "net8.0-windows10.0.19041.0",
             "projectReferences": {
-              "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP Algorithms.csproj": {
-                "projectPath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP Algorithms.csproj"
+              "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj": {
+                "projectPath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj"
               }
             }
           }

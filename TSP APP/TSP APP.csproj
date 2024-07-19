@@ -75,7 +75,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\TSP Algorithms\TSP Algorithms.csproj" />
+	  <ProjectReference Include="..\TSP Algorithms\TSP_Algorithms.csproj" />
 	</ItemGroup>
 
 </Project>

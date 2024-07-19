@@ -34,8 +34,8 @@
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TSP APP.dll">
       <PackagePath>TSP APP.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\bin\Debug\net8.0-windows10.0.19041.0\TSP Algorithms.dll">
-      <PackagePath>TSP Algorithms.dll</PackagePath>
+    <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\bin\Debug\net8.0-windows10.0.19041.0\TSP_Algorithms.dll">
+      <PackagePath>TSP_Algorithms.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>TSP APP.exe</PackagePath>
