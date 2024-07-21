@@ -7692,24 +7692,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PetrasR-PC\\.nuget\\packages\\": {},
+    "C:\\Users\\visti\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj",
+      "projectUniqueName": "C:\\Users\\visti\\source\\repos\\TSP APP\\TSP Algorithms\\TSP_Algorithms.csproj",
       "projectName": "TSP_Algorithms",
-      "projectPath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj",
-      "packagesPath": "C:\\Users\\PetrasR-PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\obj\\",
+      "projectPath": "C:\\Users\\visti\\source\\repos\\TSP APP\\TSP Algorithms\\TSP_Algorithms.csproj",
+      "packagesPath": "C:\\Users\\visti\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\visti\\source\\repos\\TSP APP\\TSP Algorithms\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\PetrasR-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\visti\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

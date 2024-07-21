@@ -8,6 +8,7 @@ namespace TSP_APP
         List<Point> Points = new List<Point>();
         int NumOfPoints = 0;
         CoordinateAxisDrawable drawable;
+        List<string> AlgorithmNames = ["Brute Force", "Nearest Neighbour"];
 
         public MainPage()
         {
@@ -15,6 +16,7 @@ namespace TSP_APP
 
             drawable = new CoordinateAxisDrawable(Points);
             graphicsView.Drawable = drawable;
+            AlgoPicker.ItemsSource = AlgorithmNames;
         }
         void RandomPointBtnClicked(object sender, EventArgs args)
         {
@@ -27,9 +29,39 @@ namespace TSP_APP
 
             drawable.UpdatePoints(Points, false, Points[0]);
             graphicsView.Invalidate();
-            BruteForcePathBtn.IsEnabled = true;
-            ClosestNeighbourPathBtn.IsEnabled = true;
-            UpdateLabels(0, Points.Count+1, 0, 0);
+            UpdateLabels(0, Points.Count + 1, 0, 0);
+        }
+
+        void DrawPathBtnClicked(object sender, EventArgs args)
+        {
+            var selectedAlgoIndex = AlgoPicker.SelectedIndex;
+
+            (List<Point> points, float distance) path;
+
+            var watch = new System.Diagnostics.Stopwatch();
+            watch.Start();
+
+            switch(selectedAlgoIndex)
+            {
+                case 0:
+                    path = Algorithms.BruteForce(Points);
+                    break;
+                case 1:
+                    path = Algorithms.NearestNeighbour(Points);
+                    break;
+                default:
+                    path = ([new Point(0, 0)], 0);
+                    break;
+            }
+
+            watch.Stop();
+            var timeElapsed = watch.ElapsedMilliseconds;
+            var ticksElapsed = watch.ElapsedTicks;
+
+            drawable.UpdatePoints(path.points, true, Points[0]);
+            graphicsView.Invalidate();
+            UpdateLabels(path.distance, path.points.Count, timeElapsed, ticksElapsed);
+
         }
 
         void BruteForcePathBtnClicked(object sender, EventArgs args)
@@ -66,8 +98,7 @@ namespace TSP_APP
 
         void ClearPointsBtnClicked(object sender, EventArgs args)
         {
-            BruteForcePathBtn.IsEnabled = false;
-            ClosestNeighbourPathBtn.IsEnabled = false;
+            DrawPathBtn.IsEnabled = false;
             UpdateLabels();
             Points.Clear();
             drawable.UpdatePoints(Points, false, new Point(0, 0));
@@ -106,7 +137,6 @@ namespace TSP_APP
             else
             {
                 RandomPointBtn.IsEnabled = false;
-                BruteForcePathBtn.TextColor = Colors.White;
             }
         }
 
@@ -120,7 +150,10 @@ namespace TSP_APP
             graphicsView.WidthRequest = graphicsView.HeightRequest;
         }
 
-
+        private void AlgoPicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DrawPathBtn.IsEnabled = true;
+        }
     }
 
 }

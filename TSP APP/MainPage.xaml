@@ -40,25 +40,23 @@
                         x:Name="RandomPointBtn"
                         Clicked="RandomPointBtnClicked"
                         IsEnabled="False"
-                        FontSize="12"/>
+                        FontSize="12" />
 
-                <Button Text="Brute Force Path"
-                        x:Name="BruteForcePathBtn"
-                        IsEnabled="False"
-                        Clicked="BruteForcePathBtnClicked"
-                        ToolTipProperties.Text="If number of points is larger than 10, path generation will take a very long time"
-                        FontSize="12"/>
+                <Picker x:Name="AlgoPicker"
+                        Title="Select algorithm"
+                        ItemsSource="{Binding AlgorithmNames}" 
+                        SelectedIndexChanged="AlgoPicker_SelectedIndexChanged"/>
 
-                <Button Text="Nearest Neighbour Path"
-                        x:Name="ClosestNeighbourPathBtn"
-                        IsEnabled="False"
-                        Clicked="ClosestNeighbourPathBtnClicked"
-                        FontSize="12"/>
+                <Button x:Name="DrawPathBtn"
+                        Text="Generate Path"
+                        Clicked="DrawPathBtnClicked"
+                        FontSize="12"
+                        IsEnabled="False" />
 
                 <Button Text="Clear Points"
                         x:Name="ClearPointsBtn"
                         Clicked="ClearPointsBtnClicked"
-                        FontSize="12"/>
+                        FontSize="12" />
 
             </VerticalStackLayout>
 
@@ -79,19 +77,19 @@
 
                 <Label x:Name="DistanceLbl"
                        Text="Total Distance: 0"
-                       FontSize="12"/>
+                       FontSize="12" />
 
                 <Label x:Name="PointCountLbl"
                        Text="Points Drawn: 0"
-                       FontSize="12"/>
+                       FontSize="12" />
 
                 <Label x:Name="TicksElapsedLbl"
                        Text="Ticks Elapsed: 0"
-                       FontSize="12"/>
+                       FontSize="12" />
 
                 <Label x:Name="TimeElapsedLbl"
                        Text="Time Elapsed: 0"
-                       FontSize="12"/>
+                       FontSize="12" />
             </VerticalStackLayout>
         </HorizontalStackLayout>
     </VerticalStackLayout>
