@@ -78,4 +78,10 @@
 	  <ProjectReference Include="..\TSP Algorithms\TSP_Algorithms.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="AlgorithmTestPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>

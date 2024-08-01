@@ -92,6 +92,9 @@
                        FontSize="12" />
             </VerticalStackLayout>
         </HorizontalStackLayout>
+        <Button Text="Algo Test Page"
+                x:Name="NavigateBtn"
+                Clicked="NavigateBtnClicked" />
     </VerticalStackLayout>
 
 

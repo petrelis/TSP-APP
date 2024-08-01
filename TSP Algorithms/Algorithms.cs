@@ -1,4 +1,8 @@
-﻿namespace TSP_Algorithms
+﻿using Microsoft.Maui.Controls.Shapes;
+using System.Linq;
+using TSP_Algorithms.Classes;
+
+namespace TSP_Algorithms
 {
     // All the code in this file is included in all platforms.
     public class Algorithms
@@ -94,6 +98,69 @@
             }
             totaldistance += (float)currentPoint.Distance(startPoint);
             pointsOnBestPath.Add(startPoint);
+            return (pointsOnBestPath, totaldistance);
+        }
+
+        public static (List<Point> points, float distance) CircleMethod(List<Point> points)
+        {
+            if (points.Count <= 1)
+                return (points, 0);
+
+            var homePoint = points[0];
+            float centroidX = 0;
+            float centroidY = 0;
+            foreach (var point in points)
+            {
+                centroidX += (float)point.X;
+                centroidY += (float)point.Y;
+            }
+            centroidX /= points.Count;
+            centroidY /= points.Count;
+
+            Point centroid = new Point(centroidX, centroidY);
+
+            List<PointWithDistance> pointsWithDistances = new List<PointWithDistance>();
+
+            foreach (var point in points)
+            {
+                PointWithDistance pointWithDistance = new PointWithDistance
+                {
+                    Point = point,
+                    Distance = point.Distance(centroid)
+                };
+                pointsWithDistances.Add(pointWithDistance);
+            }
+
+
+            var currentPoint = pointsWithDistances[0];
+            List<Point> pointsOnBestPath = [currentPoint.Point];
+            float totaldistance = 0;
+            while (pointsOnBestPath.Count != points.Count)
+            {
+                float minDistScore = float.MaxValue;
+                float minDist = float.MaxValue;
+                PointWithDistance nearestPoint = new PointWithDistance();
+                foreach (var point in pointsWithDistances)
+                {
+                    if (!pointsOnBestPath.Contains(point.Point))
+                    {
+                        float dist = (float)currentPoint.Point.Distance(point.Point);
+                        float distScore = dist+(float)Math.Abs((currentPoint.Distance-point.Distance));
+                        if (distScore < minDistScore)
+                        {
+                            minDistScore = distScore;
+                            nearestPoint.Point = point.Point;
+                            nearestPoint.Distance = point.Distance;
+                            minDist = dist;
+                        }
+                    }
+                }
+                pointsOnBestPath.Add(nearestPoint.Point);
+                totaldistance += minDist;
+                currentPoint = nearestPoint;
+            }
+            totaldistance += (float)currentPoint.Point.Distance(homePoint);
+            pointsOnBestPath.Add(homePoint);
             return (pointsOnBestPath, totaldistance);
         }
 

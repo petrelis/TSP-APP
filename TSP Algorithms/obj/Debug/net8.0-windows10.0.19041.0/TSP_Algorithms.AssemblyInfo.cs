@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TSP_Algorithms")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e7bd9c2ca979782417b4e7462f3ae9b3678aa3a4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d289a4d7db9e9b09bdd6c7bda181b373974e6d6")]
 [assembly: System.Reflection.AssemblyProductAttribute("TSP_Algorithms")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TSP_Algorithms")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

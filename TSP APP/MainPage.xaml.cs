@@ -8,7 +8,7 @@ namespace TSP_APP
         List<Point> Points = new List<Point>();
         int NumOfPoints = 0;
         CoordinateAxisDrawable drawable;
-        List<string> AlgorithmNames = ["Brute Force", "Nearest Neighbour"];
+        List<string> AlgorithmNames = ["Brute Force", "Nearest Neighbour", "Circle Method"];
 
         public MainPage()
         {
@@ -48,6 +48,9 @@ namespace TSP_APP
                     break;
                 case 1:
                     path = Algorithms.NearestNeighbour(Points);
+                    break;
+                case 2:
+                    path = Algorithms.CircleMethod(Points);
                     break;
                 default:
                     path = ([new Point(0, 0)], 0);
@@ -153,6 +156,11 @@ namespace TSP_APP
         private void AlgoPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
             DrawPathBtn.IsEnabled = true;
+        }
+
+        private async void NavigateBtnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AlgorithmTestPage());
         }
     }
 
