@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-08-01T09:42:48.474</Modified>
+      <Modified>2024-09-23T12:09:52.339</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,15 +43,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TSP APP.dll">
       <PackagePath>TSP APP.dll</PackagePath>
-      <Modified>2024-08-01T09:42:47.979</Modified>
+      <Modified>2024-09-23T12:09:51.349</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP Algorithms\bin\Debug\net8.0-windows10.0.19041.0\TSP_Algorithms.dll">
       <PackagePath>TSP_Algorithms.dll</PackagePath>
-      <Modified>2024-08-01T10:08:07.705</Modified>
+      <Modified>2024-09-25T11:27:28.777</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>TSP APP.exe</PackagePath>
-      <Modified>2024-08-01T09:42:47.984</Modified>
+      <Modified>2024-09-23T12:09:51.396</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>

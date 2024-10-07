@@ -36,7 +36,7 @@ namespace TSP_APP
         {
             var selectedAlgoIndex = AlgoPicker.SelectedIndex;
 
-            (List<Point> points, float distance) path;
+            (List<Point> points, float distance, Point homePoint) path;
 
             var watch = new System.Diagnostics.Stopwatch();
             watch.Start();
@@ -47,13 +47,13 @@ namespace TSP_APP
                     path = Algorithms.BruteForce(Points);
                     break;
                 case 1:
-                    path = Algorithms.NearestNeighbour(Points);
+                    path = Algorithms.ConvexHull(Points);
                     break;
                 case 2:
                     path = Algorithms.CircleMethod(Points);
                     break;
                 default:
-                    path = ([new Point(0, 0)], 0);
+                    path = ([new Point(0, 0)], 0, new Point(0, 0));
                     break;
             }
 
@@ -61,7 +61,7 @@ namespace TSP_APP
             var timeElapsed = watch.ElapsedMilliseconds;
             var ticksElapsed = watch.ElapsedTicks;
 
-            drawable.UpdatePoints(path.points, true, Points[0]);
+            drawable.UpdatePoints(path.points, true, path.homePoint);
             graphicsView.Invalidate();
             UpdateLabels(path.distance, path.points.Count, timeElapsed, ticksElapsed);
 

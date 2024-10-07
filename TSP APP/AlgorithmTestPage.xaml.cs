@@ -12,9 +12,9 @@ public partial class AlgorithmTestPage : ContentPage
 
     private void TestAllAlgosBtnClicked(object sender, EventArgs e)
     {
-        int numOfCycles = 999;
+        int numOfCycles = 9999;
         List<Point> points = new List<Point>();
-        int numOfPoints = 7;
+        int numOfPoints = 55;
         long[] times = new long[3];
         double[] distances = new double[3];
 
@@ -29,16 +29,16 @@ public partial class AlgorithmTestPage : ContentPage
             }
 
             //Generate paths and calculate times and distances
-            (List<Point> points, float distance) path;
+            (List<Point> points, float distance, Point homePoint) path;
 
             Stopwatch[] watches = new Stopwatch[3];
 
-            watches[0] = new Stopwatch();
-            watches[0].Start();
-            path = Algorithms.BruteForce(points);
-            watches[0].Stop();
-            times[0] += watches[0].ElapsedTicks;
-            distances[0] += path.distance;
+            //watches[0] = new Stopwatch();
+            //watches[0].Start();
+            //path = Algorithms.BruteForce(points);
+            //watches[0].Stop();
+            //times[0] += watches[0].ElapsedTicks;
+            //distances[0] += path.distance;
 
             watches[1] = new Stopwatch();
             watches[1].Start();
@@ -61,9 +61,9 @@ public partial class AlgorithmTestPage : ContentPage
             //times[2] /= times[0];
         }
 
-        NNDistanceEfficiencyLbl.Text = $"NNDistance Efficiency: {(1- distances[1] / distances[0])*100:0.0000}%";
+        NNDistanceEfficiencyLbl.Text = $"NNDistance Efficiency: {(1- distances[1] / distances[1])*100:0.0000}%";
         NNTimeEfficiencyLbl.Text = $"NNTime Efficiency: {times[1]}";
-        CMDistanceEfficiencyLbl.Text = $"CMDistance Efficiency: {(1 - distances[2] / distances[0]) * 100:0.0000}%";
+        CMDistanceEfficiencyLbl.Text = $"CMDistance Efficiency: {(1 - distances[2] / distances[1]) * 100:0.0000}%";
         CMTimeEfficiencyLbl.Text = $"CMTime Efficiency: {times[2]}";
     }
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace TSP_Algorithms.Classes
 {
-    public class PointWithDistance
+    public class PointWithAngle
     {
         public Point Point { get; set; }
-        public double DistanceToCentroid { get; set; }
+        public double Angle { get; set; }
     }
 }

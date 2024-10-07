@@ -76,7 +76,7 @@ namespace TSP_Algorithms.Drawables
 
             if (_drawLines)
             {
-                canvas.StrokeColor = Colors.Blue;
+                canvas.StrokeColor = Colors.Yellow;
 
                 for (int i = 0; i < pointsDrawn.Count - 1; i++)
                 {
