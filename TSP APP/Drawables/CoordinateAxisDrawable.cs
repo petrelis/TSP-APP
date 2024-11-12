@@ -11,6 +11,8 @@ namespace TSP_Algorithms.Drawables
         private List<Point> _points;
         private bool _drawLines;
         private Point _homePoint;
+        private bool _isConvexHull;
+        private List<List<Point>> _convexHulls;
 
         public CoordinateAxisDrawable(List<Point> points)
         {
@@ -23,6 +25,16 @@ namespace TSP_Algorithms.Drawables
             _drawLines = drawLines;
             _homePoint = homePoint;
         }
+
+        public void UpdatePoints(List<Point> points, bool drawLines, Point homePoint, bool isConvexHull, List<List<Point>>? convexHulls)
+        {
+            _points = points;
+            _drawLines = drawLines;
+            _homePoint = homePoint;
+            _isConvexHull = isConvexHull;
+            _convexHulls = convexHulls;
+        }
+
 
         public void Draw(ICanvas canvas, RectF dirtyRect)
         {
@@ -81,6 +93,20 @@ namespace TSP_Algorithms.Drawables
                 for (int i = 0; i < pointsDrawn.Count - 1; i++)
                 {
                     canvas.DrawLine(pointsDrawn[i], pointsDrawn[i + 1]);
+                }
+            }
+
+            if(_isConvexHull)
+            {
+
+                canvas.StrokeColor = Colors.Pink;
+
+                foreach (var ch in _convexHulls)
+                {
+                    for (int i = 0; i < ch.Count - 1; i++)
+                    {
+                        canvas.DrawLine(ch[i], ch[i + 1]);
+                    }
                 }
             }
         }

@@ -360,3 +360,4 @@ C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\bin\Debug\net8.0-windows10.
 C:\Users\PetrasR-PC\Documents\GitHub\TSP-APP\TSP APP\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TSP_Algorithms.pdb
 C:\Users\visti\source\repos\TSP APP\TSP APP\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TSP_Algorithms.dll
 C:\Users\visti\source\repos\TSP APP\TSP APP\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TSP_Algorithms.pdb
+C:\Users\visti\source\repos\TSP APP\TSP APP\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.IO.RecyclableMemoryStream.dll

@@ -1,4 +1,5 @@
 ﻿using TSP_Algorithms;
+using TSP_Algorithms.Classes;
 using TSP_Algorithms.Drawables;
 
 namespace TSP_APP
@@ -8,7 +9,7 @@ namespace TSP_APP
         List<Point> Points = new List<Point>();
         int NumOfPoints = 0;
         CoordinateAxisDrawable drawable;
-        List<string> AlgorithmNames = ["Brute Force", "Nearest Neighbour", "Circle Method"];
+        List<string> AlgorithmNames = [BruteForce.Name, NearestNeighbour.Name, CircleMethod.Name, ConvexHull.Name];
 
         public MainPage()
         {
@@ -36,7 +37,8 @@ namespace TSP_APP
         {
             var selectedAlgoIndex = AlgoPicker.SelectedIndex;
 
-            (List<Point> points, float distance, Point homePoint) path;
+            ShortestPath path = null;
+            bool convexhull = false;
 
             var watch = new System.Diagnostics.Stopwatch();
             watch.Start();
@@ -44,16 +46,20 @@ namespace TSP_APP
             switch(selectedAlgoIndex)
             {
                 case 0:
-                    path = Algorithms.BruteForce(Points);
+                    path = new ShortestPath(BruteForce.RunBruteForceAlgo(Points));
                     break;
                 case 1:
-                    path = Algorithms.ConvexHull(Points);
+                    path = new ShortestPath(NearestNeighbour.RunNearestNeighbourAlgo(Points));
                     break;
                 case 2:
-                    path = Algorithms.CircleMethod(Points);
+                    path = new ShortestPath(CircleMethod.RunCircleMethodAlgo(Points));
+                    break;
+                case 3:
+                    path = new ShortestPath(ConvexHull.RunConvexHullAlgo(Points));
+                    convexhull = true;
                     break;
                 default:
-                    path = ([new Point(0, 0)], 0, new Point(0, 0));
+                    path = new ShortestPath(([new Point(0, 0)], 0, new Point(0, 0)));
                     break;
             }
 
@@ -61,42 +67,10 @@ namespace TSP_APP
             var timeElapsed = watch.ElapsedMilliseconds;
             var ticksElapsed = watch.ElapsedTicks;
 
-            drawable.UpdatePoints(path.points, true, path.homePoint);
+            drawable.UpdatePoints(path.Points, true, path.HomePoint, path.IsConvexHull, path.AllConvexHulls);
             graphicsView.Invalidate();
-            UpdateLabels(path.distance, path.points.Count, timeElapsed, ticksElapsed);
+            UpdateLabels(path.Distance, path.Points.Count, timeElapsed, ticksElapsed);
 
-        }
-
-        void BruteForcePathBtnClicked(object sender, EventArgs args)
-        {
-            var watch = new System.Diagnostics.Stopwatch();
-            watch.Start();
-
-            var bruteForcePath = Algorithms.BruteForce(Points);
-
-            watch.Stop();
-            var timeElapsed = watch.ElapsedMilliseconds;
-            var ticksElapsed = watch.ElapsedTicks;
-
-            drawable.UpdatePoints(bruteForcePath.points, true, Points[0]);
-            graphicsView.Invalidate();
-            UpdateLabels(bruteForcePath.distance, bruteForcePath.points.Count, timeElapsed, ticksElapsed);
-        }
-
-        void ClosestNeighbourPathBtnClicked(object sender, EventArgs args)
-        {
-            var watch = new System.Diagnostics.Stopwatch();
-            watch.Start();
-
-            var closesNeighbourPath = Algorithms.NearestNeighbour(Points);
-
-            watch.Stop();
-            var timeElapsed = watch.ElapsedMilliseconds;
-            var ticksElapsed = watch.ElapsedTicks;
-
-            drawable.UpdatePoints(closesNeighbourPath.points, true, Points[0]);
-            graphicsView.Invalidate();
-            UpdateLabels(closesNeighbourPath.distance, closesNeighbourPath.points.Count, timeElapsed, ticksElapsed);
         }
 
         void ClearPointsBtnClicked(object sender, EventArgs args)
@@ -156,12 +130,26 @@ namespace TSP_APP
         private void AlgoPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
             DrawPathBtn.IsEnabled = true;
+            if (AlgoPicker.SelectedIndex == 3)
+            {
+                DisplayHullsBtn.IsVisible = true;
+            }
+            else
+            {
+                DisplayHullsBtn.IsVisible = false;
+            }
         }
 
         private async void NavigateBtnClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AlgorithmTestPage());
         }
+
+        private void DisplayHullsBtnClicked(object sender, EventArgs e)
+        {
+            
+        }
+
     }
 
 }

@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP APP\\TSP APP.csproj": {}
+    "C:\\Users\\visti\\source\\repos\\TSP APP\\TSP APP\\TSP APP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj": {
+    "C:\\Users\\visti\\source\\repos\\TSP APP\\TSP Algorithms\\TSP_Algorithms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj",
+        "projectUniqueName": "C:\\Users\\visti\\source\\repos\\TSP APP\\TSP Algorithms\\TSP_Algorithms.csproj",
         "projectName": "TSP_Algorithms",
-        "projectPath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj",
-        "packagesPath": "C:\\Users\\PetrasR-PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\obj\\",
+        "projectPath": "C:\\Users\\visti\\source\\repos\\TSP APP\\TSP Algorithms\\TSP_Algorithms.csproj",
+        "packagesPath": "C:\\Users\\visti\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\visti\\source\\repos\\TSP APP\\TSP Algorithms\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\PetrasR-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\visti\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -38,11 +38,11 @@
             "targetAlias": "net8.0-android",
             "projectReferences": {}
           },
-          "net8.0-ios17.2": {
+          "net8.0-ios17.5": {
             "targetAlias": "net8.0-ios",
             "projectReferences": {}
           },
-          "net8.0-maccatalyst17.2": {
+          "net8.0-maccatalyst17.5": {
             "targetAlias": "net8.0-maccatalyst",
             "projectReferences": {}
           },
@@ -68,11 +68,11 @@
           "dependencies": {
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.61, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.61, )"
+              "version": "[8.0.82, )"
             }
           },
           "imports": [
@@ -94,23 +94,23 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         },
-        "net8.0-ios17.2": {
+        "net8.0-ios17.5": {
           "targetAlias": "net8.0-ios",
           "dependencies": {
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.61, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.61, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.7, )",
+              "version": "[8.0.8, )",
               "autoReferenced": true
             }
           },
@@ -133,23 +133,23 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         },
-        "net8.0-maccatalyst17.2": {
+        "net8.0-maccatalyst17.5": {
           "targetAlias": "net8.0-maccatalyst",
           "dependencies": {
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.61, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.61, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.7, )",
+              "version": "[8.0.8, )",
               "autoReferenced": true
             }
           },
@@ -173,18 +173,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         },
         "net8.0-windows10.0.19041": {
           "targetAlias": "net8.0-windows10.0.19041.0",
           "dependencies": {
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.61, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.61, )"
+              "version": "[8.0.82, )"
             }
           },
           "imports": [
@@ -201,7 +201,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.Windows.SDK.NET.Ref",
-              "version": "[10.0.19041.31, 10.0.19041.31]"
+              "version": "[10.0.19041.34, 10.0.19041.34]"
             }
           ],
           "frameworkReferences": {
@@ -212,25 +212,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP APP\\TSP APP.csproj": {
+    "C:\\Users\\visti\\source\\repos\\TSP APP\\TSP APP\\TSP APP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP APP\\TSP APP.csproj",
+        "projectUniqueName": "C:\\Users\\visti\\source\\repos\\TSP APP\\TSP APP\\TSP APP.csproj",
         "projectName": "TSP APP",
-        "projectPath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP APP\\TSP APP.csproj",
-        "packagesPath": "C:\\Users\\PetrasR-PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP APP\\obj\\",
+        "projectPath": "C:\\Users\\visti\\source\\repos\\TSP APP\\TSP APP\\TSP APP.csproj",
+        "packagesPath": "C:\\Users\\visti\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\visti\\source\\repos\\TSP APP\\TSP APP\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\PetrasR-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\visti\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -249,32 +249,32 @@
           "net8.0-android34.0": {
             "targetAlias": "net8.0-android",
             "projectReferences": {
-              "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj": {
-                "projectPath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj"
+              "C:\\Users\\visti\\source\\repos\\TSP APP\\TSP Algorithms\\TSP_Algorithms.csproj": {
+                "projectPath": "C:\\Users\\visti\\source\\repos\\TSP APP\\TSP Algorithms\\TSP_Algorithms.csproj"
               }
             }
           },
-          "net8.0-ios17.2": {
+          "net8.0-ios17.5": {
             "targetAlias": "net8.0-ios",
             "projectReferences": {
-              "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj": {
-                "projectPath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj"
+              "C:\\Users\\visti\\source\\repos\\TSP APP\\TSP Algorithms\\TSP_Algorithms.csproj": {
+                "projectPath": "C:\\Users\\visti\\source\\repos\\TSP APP\\TSP Algorithms\\TSP_Algorithms.csproj"
               }
             }
           },
-          "net8.0-maccatalyst17.2": {
+          "net8.0-maccatalyst17.5": {
             "targetAlias": "net8.0-maccatalyst",
             "projectReferences": {
-              "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj": {
-                "projectPath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj"
+              "C:\\Users\\visti\\source\\repos\\TSP APP\\TSP Algorithms\\TSP_Algorithms.csproj": {
+                "projectPath": "C:\\Users\\visti\\source\\repos\\TSP APP\\TSP Algorithms\\TSP_Algorithms.csproj"
               }
             }
           },
           "net8.0-windows10.0.19041": {
             "targetAlias": "net8.0-windows10.0.19041.0",
             "projectReferences": {
-              "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj": {
-                "projectPath": "C:\\Users\\PetrasR-PC\\Documents\\GitHub\\TSP-APP\\TSP Algorithms\\TSP_Algorithms.csproj"
+              "C:\\Users\\visti\\source\\repos\\TSP APP\\TSP Algorithms\\TSP_Algorithms.csproj": {
+                "projectPath": "C:\\Users\\visti\\source\\repos\\TSP APP\\TSP Algorithms\\TSP_Algorithms.csproj"
               }
             }
           }
@@ -300,16 +300,16 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.61, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.61, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.7, )",
+              "version": "[8.0.8, )",
               "autoReferenced": true
             }
           },
@@ -332,9 +332,9 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         },
-        "net8.0-ios17.2": {
+        "net8.0-ios17.5": {
           "targetAlias": "net8.0-ios",
           "dependencies": {
             "Microsoft.Extensions.Logging.Debug": {
@@ -343,16 +343,16 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.61, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.61, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.7, )",
+              "version": "[8.0.8, )",
               "autoReferenced": true
             }
           },
@@ -375,9 +375,9 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         },
-        "net8.0-maccatalyst17.2": {
+        "net8.0-maccatalyst17.5": {
           "targetAlias": "net8.0-maccatalyst",
           "dependencies": {
             "Microsoft.Extensions.Logging.Debug": {
@@ -386,16 +386,16 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.61, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.61, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.7, )",
+              "version": "[8.0.8, )",
               "autoReferenced": true
             }
           },
@@ -419,7 +419,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         },
         "net8.0-windows10.0.19041": {
           "targetAlias": "net8.0-windows10.0.19041.0",
@@ -430,11 +430,11 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.61, )"
+              "version": "[8.0.82, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.61, )"
+              "version": "[8.0.82, )"
             }
           },
           "imports": [
@@ -451,7 +451,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.Windows.SDK.NET.Ref",
-              "version": "[10.0.19041.31, 10.0.19041.31]"
+              "version": "[10.0.19041.34, 10.0.19041.34]"
             }
           ],
           "frameworkReferences": {
@@ -462,7 +462,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

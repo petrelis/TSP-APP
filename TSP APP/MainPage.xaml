@@ -62,7 +62,7 @@
 
 
             <VerticalStackLayout Padding="10"
-                                 Spacing="15"
+                                 Spacing="6"
                                  HorizontalOptions="Center">
 
                 <VerticalStackLayout>
@@ -90,6 +90,13 @@
                 <Label x:Name="TimeElapsedLbl"
                        Text="Time Elapsed: 0"
                        FontSize="12" />
+
+                <Button x:Name="DisplayHullsBtn"
+                        Text="Display All Convex Hull"
+                        Clicked="DisplayHullsBtnClicked"
+                        FontSize="12"
+                        IsEnabled="False"
+                        IsVisible="False" />
             </VerticalStackLayout>
         </HorizontalStackLayout>
         <Button Text="Algo Test Page"
