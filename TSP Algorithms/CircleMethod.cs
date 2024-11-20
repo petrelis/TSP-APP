@@ -16,37 +16,37 @@ namespace TSP_Algorithms
             if (points.Count <= 1)
                 return (points, 0, points[0]);
 
-            var homePoint = points[0];
+            var workingPoints = new List<Point>(points);
 
             // Find the index of the point with the lowest Y value
-            int indexOfLowestY = points
+            int indexOfLowestY = workingPoints
                 .Select((point, index) => new { Point = point, Index = index })
                 .Aggregate((p1, p2) => p1.Point.Y > p2.Point.Y ? p1 : p2)
                 .Index;
 
             // Swap the point with the lowest Y value with the first point in the list
-            Point temp = points[0];
-            points[0] = points[indexOfLowestY];
-            points[indexOfLowestY] = temp;
+            Point temp = workingPoints[0];
+            workingPoints[0] = workingPoints[indexOfLowestY];
+            workingPoints[indexOfLowestY] = temp;
 
 
             // Calculate centroid
             float centroidX = 0;
             float centroidY = 0;
-            foreach (var point in points)
+            foreach (var point in workingPoints)
             {
                 centroidX += (float)point.X;
                 centroidY += (float)point.Y;
             }
-            centroidX /= points.Count;
-            centroidY /= points.Count;
+            centroidX /= workingPoints.Count;
+            centroidY /= workingPoints.Count;
 
             Point centroid = new Point(centroidX, centroidY);
 
 
             // Create pointsWithDistances (point, distance to centroid)
             List<PointWithDistance> pointsWithDistances = new List<PointWithDistance>();
-            foreach (var point in points)
+            foreach (var point in workingPoints)
             {
                 PointWithDistance pointWithDistance = new PointWithDistance
                 {
@@ -60,7 +60,7 @@ namespace TSP_Algorithms
             List<Point> pointsOnBestPath = [currentPoint.Point];
             float totaldistance = 0;
             // Loop through points until path has all points
-            while (pointsOnBestPath.Count != points.Count)
+            while (pointsOnBestPath.Count != workingPoints.Count)
             {
                 // init values
                 float minDistScore = float.MaxValue;
@@ -92,9 +92,10 @@ namespace TSP_Algorithms
                 totaldistance += minDist;
                 currentPoint = nearestPoint;
             }
-            totaldistance += (float)currentPoint.Point.Distance(points[0]);
-            pointsOnBestPath.Add(points[0]);
-            return (pointsOnBestPath, totaldistance, homePoint);
+            pointsOnBestPath.Add(workingPoints[0]);
+            pointsOnBestPath = Algorithms.TwoOpt(pointsOnBestPath);
+            var totalDistance = (float)Algorithms.CalculatePathDistance(pointsOnBestPath);
+            return (pointsOnBestPath, totalDistance, points[0]);
         }
     }
 }

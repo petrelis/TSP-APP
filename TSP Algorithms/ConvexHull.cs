@@ -8,68 +8,63 @@ using TSP_Algorithms.Classes.ConvexHullClasses;
 
 namespace TSP_Algorithms
 {
-    public class ConvexHull //Graham's scan
+    public class ConvexHull
     {
         public const string Name = "Convex Hull";
 
-        public static (List<Point> points, float distance, Point homePoint, List<List<Point>> allHulls) RunConvexHullAlgo(List<Point> points)
+        private class DistanceCache
         {
-            (List<List<Point>> allConvexHulls, List<Point> restPoints) = FindAllConvexHulls(points);
+            //Key of two points and value of distance
+            private readonly Dictionary<(Point, Point), double> _cache = new();
 
-            List<Point> pointsOnBestPath = new List<Point>();
-
-            for (int i = 0; i < allConvexHulls.Count - 1; i++)
+            public double GetDistance(Point p1, Point p2)
             {
-                var pointstoConnect = allConvexHulls[i];
-                pointstoConnect.AddRange(allConvexHulls[i + 1]);
-
-                ShortestPath path = new ShortestPath(BruteForce.RunBruteForceAlgo(pointstoConnect));
-
-                pointsOnBestPath.AddRange(path.Points);
+                var key = (p1, p2);
+                //if distance between two points is not in the dictionary
+                if (!_cache.ContainsKey(key))
+                {
+                    //add point and distance kvp
+                    _cache[key] = p1.Distance(p2);
+                }
+                //return stored distance between the two points
+                return _cache[key];
             }
-
-            var pointsToConnect = allConvexHulls[^1];
-            pointsToConnect.AddRange(restPoints);
-
-            ShortestPath lastPath = new ShortestPath(BruteForce.RunBruteForceAlgo(pointsToConnect));
-
-            pointsOnBestPath.AddRange(lastPath.Points);
-
-
-            //var allVisibilityVertices = FindVisibilityVertices(allConvexHulls);
-
-            //foreach (var hull in allVisibilityVertices)
-            //{
-            //    foreach (var visibilityVertex in hull)
-            //    {
-
-            //    }
-            //}
-
-            //foreach (var convHull in allConvexHulls)
-            //{
-            //    foreach (var point in convHull)
-            //    {
-            //        pointsOnBestPath.Add(point);
-            //    }
-            //}
-
-            //foreach(var restPoint in  restPoints)
-            //{
-            //    pointsOnBestPath.Add(restPoint);
-            //}
-
-            return (pointsOnBestPath, 0, pointsOnBestPath[0], allConvexHulls);
         }
 
-        static (List<List<Point>>, List<Point>) FindAllConvexHulls(List<Point> points)
+
+        public static (List<Point> points, float distance, Point homePoint, List<List<Point>>? allHulls) RunConvexHullAlgo(List<Point> points)
+        {
+            if (points == null || points.Count < 3)
+                return (points, 0, new Point(0, 0), null);
+
+            var workingPoints = new List<Point>(points);
+
+            //(List<List<Point>> allConvexHulls, List<Point> rp) = FindAllConvexHulls(workingPoints);
+
+            //List<Point> pointsOnBestPath = ConnectAllConvexHulls(allConvexHulls, restPoints);
+
+            (List<Point> convexHull, List<Point> restPoints) = FindConvexHull(workingPoints);
+
+            var allConvexHulls = new List<List<Point>> { convexHull };
+
+            var pointsOnBestPath = ConnectTwoConvexHulls(convexHull, restPoints);
+
+            pointsOnBestPath = Algorithms.TwoOpt(pointsOnBestPath);
+
+            var totalDistance = (float)Algorithms.CalculatePathDistance(pointsOnBestPath);
+
+            return (pointsOnBestPath, totalDistance, points[0], allConvexHulls);
+        }
+
+        public static (List<List<Point>> allConvexHulls, List<Point> restPoints) FindAllConvexHulls(List<Point> points)
         {
             List<List<Point>> allConvexHulls = new List<List<Point>>();
-            var restPoints = points;
+            var workingPoints = new List<Point>(points);
+            var restPoints = new List<Point>(points);
 
             while (restPoints.Count > 3)
             {
-                List<Point> convexHull = FindConvexHull(points);
+                (List<Point> convexHull, List<Point> rp) = FindConvexHull(workingPoints);
                 allConvexHulls.Add(convexHull);
                 restPoints.RemoveAll(convexHull.Contains);
             }
@@ -77,24 +72,26 @@ namespace TSP_Algorithms
             return (allConvexHulls, restPoints);
         }
 
-        static List<Point> FindConvexHull(List<Point> points)
+        static (List<Point> convexHull, List<Point> restPoints) FindConvexHull(List<Point> points) //Graham's Scan
         {
             if (points.Count <= 3)
-                return (points);
+                return (points, new List<Point>());
 
             var homePoint = points[0];
 
+            var workingPoints = new List<Point>(points);
+
             // Find the index of the point with the lowest Y value
-            int indexOfLowestY = points
+            int indexOfLowestY = workingPoints
                 .Select((point, index) => new { Point = point, Index = index })
                 .Aggregate((p1, p2) => p1.Point.Y > p2.Point.Y ? p1 : p2)
                 .Index;
             //Set lowest Y value point as PPoint
-            Point PPoint = points[indexOfLowestY];
+            Point PPoint = workingPoints[indexOfLowestY];
 
             //Calculate angles PPoint and all other points make with the positive X-axis
             List<PointWithAngle> pointsWithAngles = new List<PointWithAngle>();
-            foreach (var point in points)
+            foreach (var point in workingPoints)
             {
                 double angle = 180 + Math.Atan2(point.Y - PPoint.Y, point.X - PPoint.X) * 180 / Math.PI;
                 pointsWithAngles.Add(new PointWithAngle(point, angle));
@@ -103,7 +100,7 @@ namespace TSP_Algorithms
             pointsWithAngles = pointsWithAngles.OrderBy(pwa => pwa.Angle).Reverse().ToList();
 
 
-            // Stack to hold the points of the convex hull
+            //Stack to hold the points of the convex hull
             Stack<PointWithAngle> hullStack = new Stack<PointWithAngle>();
 
             // Push the first three points onto the stack
@@ -111,10 +108,10 @@ namespace TSP_Algorithms
             hullStack.Push(pointsWithAngles[1]);
             hullStack.Push(pointsWithAngles[2]);
 
-            // Process the remaining points
+            //Process the remaining points
             for (int i = 3; i < pointsWithAngles.Count; i++)
             {
-                // While the top of the stack and the next point make a right turn, pop the top
+                //While the top of the stack and the next point make a right turn, pop the top
                 while (hullStack.Count >= 2 && Orientation(NextToTop(hullStack), hullStack.Peek(), pointsWithAngles[i]) != 1)
                 {
                     hullStack.Pop();
@@ -123,23 +120,25 @@ namespace TSP_Algorithms
                 hullStack.Push(pointsWithAngles[i]);
             }
             hullStack.Push(pointsWithAngles[0]);
-            // The stack now contains the points in the convex hull
+            //The stack now contains the points in the convex hull
 
             List<Point> hullPoints = new List<Point>();
+            List<Point> restPoints = new List<Point>(points);
             foreach (var pointWithAngle in hullStack)
             {
                 hullPoints.Add(pointWithAngle.Point);
+                restPoints.Remove(pointWithAngle.Point);
             }
-            return hullPoints;
+            return (hullPoints, restPoints);
         }
 
         static int Orientation(PointWithAngle A, PointWithAngle B, PointWithAngle C)
         {
-            // Calculate the cross product of vector AB and BC
-            double value = ((B.Point.Y - A.Point.Y) * (C.Point.X - B.Point.X) - (B.Point.X - A.Point.X) * (C.Point.Y - B.Point.Y));
+            //Calculate the cross product of vector AB and BC
+            double value = (B.Point.Y - A.Point.Y) * (C.Point.X - B.Point.X) - (B.Point.X - A.Point.X) * (C.Point.Y - B.Point.Y);
 
             if (value == 0) return 0;  // Collinear
-            return (value > 0) ? 1 : -1;  // 1: Clockwise (right turn), -1: Counterclockwise (left turn)
+            return value > 0 ? 1 : -1;  // 1: Clockwise (right turn), -1: Counterclockwise (left turn)
         }
 
         static PointWithAngle NextToTop(Stack<PointWithAngle> stack)
@@ -150,76 +149,82 @@ namespace TSP_Algorithms
             return next;
         }
 
-        static List<List<VisibilityVertex>> FindVisibilityVertices(List<List<Point>> allConvexHulls)
+        private static List<Point> ConnectAllConvexHulls(List<List<Point>> allConvexHulls, List<Point> restPoints)
         {
-            List<List<VisibilityVertex>> allVisibilityVertices = new List<List<VisibilityVertex>>();
-            for (int i=0; i<allConvexHulls.Count - 1; i++)
+            if (allConvexHulls == null || allConvexHulls.Count == 0)
+                return new List<Point>();
+
+            //Create a working copy to avoid modifying the input
+            var workingHulls = allConvexHulls.Select(hull => new List<Point>(hull)).ToList();
+            var currentPath = workingHulls[0];
+
+            //Iteratively connect hulls
+            for (int i = 1; i < workingHulls.Count; i++)
             {
-                allVisibilityVertices.Add(new List<VisibilityVertex>());
-                //each outer convexhull point
-                foreach (var ppoint in allConvexHulls[i])
+                currentPath = ConnectTwoConvexHulls(currentPath, workingHulls[i]);
+            }
+
+            //Connect remaining points
+            if (restPoints.Count > 0)
+            {
+                currentPath = ConnectTwoConvexHulls(currentPath, restPoints);
+            }
+
+            return currentPath;
+        }
+
+        private static List<Point> ConnectTwoConvexHulls(List<Point> outerHull, List<Point> innerPoints)
+        {
+            if (outerHull == null || outerHull.Count < 3)
+                return new List<Point>();
+            if (innerPoints == null || innerPoints.Count < 1)
+                return outerHull;
+
+            var distanceCache = new DistanceCache();
+            var workingHull = new List<Point>(outerHull);
+            var remainingPoints = new List<Point>(innerPoints);
+
+            while (remainingPoints.Count > 0)
+            {
+                var (insertPoint, insertIndex) = FindBestInsertion(workingHull, remainingPoints, distanceCache);
+                if (insertIndex == -1)
+                    throw new InvalidOperationException("Failed to find valid insertion point");
+
+                workingHull.Insert(insertIndex, insertPoint);
+                remainingPoints.Remove(insertPoint);
+            }
+
+            return workingHull;
+        }
+
+        private static (Point point, int index) FindBestInsertion(List<Point> hull, List<Point> candidates, DistanceCache distanceCache)
+        {
+            double bestCost = double.MaxValue;
+            Point bestPoint = new();
+            int bestIndex = -1;
+
+            foreach (var candidate in candidates)
+            {
+                for (int i = 0; i < hull.Count; i++)
                 {
-                    List<PointWithAngle> pointsWithAngles = new List<PointWithAngle>();
+                    var next = (i + 1) % hull.Count;
+                    var currentEdgeLength = distanceCache.GetDistance(hull[i], hull[next]);
 
-                    //Calculate the angle, that the outer convexhull point(ppoint) makes with each inner convex hull point and the positive X-axis
-                    foreach(var point in allConvexHulls[i+1])
+                    // Calculate insertion cost
+                    var insertionCost = distanceCache.GetDistance(hull[i], candidate) +
+                                      distanceCache.GetDistance(candidate, hull[next]) -
+                                      currentEdgeLength;
+
+                    if (insertionCost < bestCost)
                     {
-                        double angle = 180 + Math.Atan2(point.Y - ppoint.Y, point.X - ppoint.X) * 180 / Math.PI;
-                        pointsWithAngles.Add(new PointWithAngle(point, angle));
+                        bestCost = insertionCost;
+                        bestPoint = candidate;
+                        bestIndex = next;
                     }
-                    //Order pointsWithAngles according to their angle with ppoint and positive X-axis
-                    pointsWithAngles = pointsWithAngles.OrderBy(pwa => pwa.Angle).ToList();
-
-                    //Create a list of visible points and add the points with the lowest and highest angles, since they will be visible in any point arrangement
-                    List<Point> visiblePoints = new List<Point>();
-                    visiblePoints.Add(pointsWithAngles[0].Point);
-                    visiblePoints.Add(pointsWithAngles[^1].Point);
-
-                    //The line past which points are not visible from base point
-                    List<Point> line = new List<Point>();
-                    line.Add(pointsWithAngles[0].Point);
-                    line.Add(pointsWithAngles[^1].Point);
-
-                    //Add all visible points to visibilityVertex points list
-                    foreach (var pwa in pointsWithAngles)
-                    {
-                        var testPoint = pwa.Point;
-                        if(!visiblePoints.Contains(testPoint) && ppoint.Distance(testPoint) > 0) 
-                        {
-                            if(!IsPointBeyondLine(ppoint, testPoint, line))
-                            {
-                                visiblePoints.Add(testPoint);
-                            }
-                        }
-                    }
-                    allVisibilityVertices[i].Add(new VisibilityVertex(ppoint, visiblePoints));
                 }
             }
 
-            return allVisibilityVertices;
-        }
-
-        public static bool IsPointBeyondLine(Point basePoint, Point targetPoint, List<Point> line)
-        {
-            var linePoint1 = line[0];
-            var linePoint2 = line[1];
-
-            // Calculate vectors
-            double dx1 = linePoint2.X - linePoint1.X;
-            double dy1 = linePoint2.Y - linePoint1.Y;
-
-            double dx2 = targetPoint.X - linePoint1.X;
-            double dy2 = targetPoint.Y - linePoint1.Y;
-
-            double dx3 = basePoint.X - linePoint1.X;
-            double dy3 = basePoint.Y - linePoint1.Y;
-
-            // Calculate cross products
-            double crossTarget = dx1 * dy2 - dy1 * dx2;
-            double crossBase = dx1 * dy3 - dy1 * dx3;
-
-            // Check if target point is on the opposite side of the line relative to the base point
-            return crossTarget * crossBase < 0;
+            return (bestPoint, bestIndex);
         }
     }
 }

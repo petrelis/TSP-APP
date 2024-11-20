@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\Users\visti\source\repos\TSP APP\TSP APP\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-11-11T20:30:10.380</Modified>
+      <Modified>2024-11-20T18:20:32.819</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,15 +43,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\visti\source\repos\TSP APP\TSP APP\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TSP APP.dll">
       <PackagePath>TSP APP.dll</PackagePath>
-      <Modified>2024-11-11T20:30:09.537</Modified>
+      <Modified>2024-11-20T18:20:31.978</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\visti\source\repos\TSP APP\TSP Algorithms\bin\Debug\net8.0-windows10.0.19041.0\TSP_Algorithms.dll">
       <PackagePath>TSP_Algorithms.dll</PackagePath>
-      <Modified>2024-11-11T21:03:27.178</Modified>
+      <Modified>2024-11-20T18:20:25.656</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\visti\source\repos\TSP APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>TSP APP.exe</PackagePath>
-      <Modified>2024-11-11T20:30:09.578</Modified>
+      <Modified>2024-11-20T18:20:32.025</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\visti\source\repos\TSP APP\TSP APP\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>

@@ -6,7 +6,7 @@ namespace TSP_APP
 {
     public partial class MainPage : ContentPage
     {
-        List<Point> Points = new List<Point>();
+        static List<Point> Points = new List<Point>();
         int NumOfPoints = 0;
         CoordinateAxisDrawable drawable;
         List<string> AlgorithmNames = [BruteForce.Name, NearestNeighbour.Name, CircleMethod.Name, ConvexHull.Name];
@@ -28,7 +28,7 @@ namespace TSP_APP
                 Points.Add(Algorithms.GenerateRandomPoint(5));
             }
 
-            drawable.UpdatePoints(Points, false, Points[0]);
+            drawable.UpdatePoints(Points, false, Points[0], false, null);
             graphicsView.Invalidate();
             UpdateLabels(0, Points.Count + 1, 0, 0);
         }

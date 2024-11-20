@@ -99,13 +99,24 @@ namespace TSP_Algorithms.Drawables
             if(_isConvexHull)
             {
 
-                canvas.StrokeColor = Colors.Pink;
-
-                foreach (var ch in _convexHulls)
+                canvas.StrokeColor = Colors.White;
+                if (_convexHulls != null || _convexHulls.Count < 1)
                 {
-                    for (int i = 0; i < ch.Count - 1; i++)
+                    foreach (var ch in _convexHulls)
                     {
-                        canvas.DrawLine(ch[i], ch[i + 1]);
+                        List<Point> chPointsDrawn = new List<Point>();
+                        foreach(var point in ch)
+                        {
+                            Point pointToDraw = new Point(point.X * PointOffsetXMultiplier + axisXMidPoint, point.Y * PointOffsetYMultiplier + axisYMidPoint);
+                            canvas.DrawCircle(pointToDraw, 3.0);
+                            chPointsDrawn.Add(pointToDraw);
+                        }
+
+                        canvas.StrokeColor = Colors.Pink;
+                        for (int i = 0; i < chPointsDrawn.Count - 1; i++)
+                        {
+                            canvas.DrawLine(chPointsDrawn[i], chPointsDrawn[i + 1]);
+                        }
                     }
                 }
             }

@@ -15,17 +15,18 @@ namespace TSP_Algorithms
             if (points.Count <= 1)
                 return (points, 0, points[0]);
 
-            var homePoint = points[0];
-            var currentPoint = homePoint;
+            var workingPoints = new List<Point>(points);
+
+            var currentPoint = workingPoints[0];
             List<Point> pointsOnBestPath = [currentPoint];
             float totaldistance = 0;
 
-            while (pointsOnBestPath.Count != points.Count)
+            while (pointsOnBestPath.Count != workingPoints.Count)
             {
                 Point nearestPoint = new Point();
                 float minDist = float.MaxValue;
 
-                foreach (var point in points)
+                foreach (var point in workingPoints)
                 {
                     if (!pointsOnBestPath.Contains(point))
                     {
@@ -41,9 +42,10 @@ namespace TSP_Algorithms
                 totaldistance += minDist;
                 currentPoint = nearestPoint;
             }
-            totaldistance += (float)currentPoint.Distance(homePoint);
-            pointsOnBestPath.Add(homePoint);
-            return (pointsOnBestPath, totaldistance, homePoint);
+            pointsOnBestPath.Add(points[0]);
+            pointsOnBestPath = Algorithms.TwoOpt(pointsOnBestPath);
+            var totalDistance = (float)Algorithms.CalculatePathDistance(pointsOnBestPath);
+            return (pointsOnBestPath, totalDistance, points[0]);
         }
     }
 }
