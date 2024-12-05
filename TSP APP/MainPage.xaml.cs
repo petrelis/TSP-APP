@@ -11,7 +11,7 @@ namespace TSP_APP
         static List<Point> Points = new List<Point>();
         int NumOfPoints = 0;
         CoordinateAxisDrawable drawable;
-        List<string> AlgorithmNames = [BruteForce.Name, NearestNeighbour.Name, CircleMethod.Name, SingleConvexHullHeuristic.Name, AllConvexHullsHeuristic.Name];
+        List<string> AlgorithmNames = [BruteForce.Name, NearestNeighbour.Name, CircleMethod.Name, SingleConvexHullHeuristic.Name, AllConvexHullsHeuristic.Name, GeneticAlgorithm.Name];
         List<string?> TSPFileNames = TSPParser.GetTspFileNames();
         ShortestPath currentPath = null;
         bool displayHullsBtnClicked = false;
@@ -63,6 +63,9 @@ namespace TSP_APP
                     break;
                 case 4:
                     currentPath = new ShortestPath(AllConvexHullsHeuristic.RunAlgo(Points));
+                    break;
+                case 5:
+                    currentPath = new ShortestPath(GeneticAlgorithm.RunAlgo(Points));
                     break;
                 default:
                     currentPath = new ShortestPath(([new Point(0, 0)], 0, new Point(0, 0)));
