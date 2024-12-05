@@ -42,14 +42,14 @@ public partial class AlgorithmTestPage : ContentPage
 
             watches[1] = new Stopwatch();
             watches[1].Start();
-            path = NearestNeighbour.RunNearestNeighbourAlgo(points);
+            path = NearestNeighbour.RunAlgo(points);
             watches[1].Stop();
             times[1] += watches[1].ElapsedTicks;
             distances[1] += path.distance;
 
             watches[2] = new Stopwatch();
             watches[2].Start();
-            path = CircleMethod.RunCircleMethodAlgo(points);
+            path = CircleMethod.RunAlgo(points);
             watches[2].Stop();
             times[2] += watches[2].ElapsedTicks;
             distances[2] += path.distance;

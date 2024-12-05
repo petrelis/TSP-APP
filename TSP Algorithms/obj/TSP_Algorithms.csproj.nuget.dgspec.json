@@ -73,6 +73,10 @@
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
               "version": "[8.0.82, )"
+            },
+            "TSPLib.Net": {
+              "target": "Package",
+              "version": "[1.1.6, )"
             }
           },
           "imports": [
@@ -112,6 +116,10 @@
               "target": "Package",
               "version": "[8.0.8, )",
               "autoReferenced": true
+            },
+            "TSPLib.Net": {
+              "target": "Package",
+              "version": "[1.1.6, )"
             }
           },
           "imports": [
@@ -151,6 +159,10 @@
               "target": "Package",
               "version": "[8.0.8, )",
               "autoReferenced": true
+            },
+            "TSPLib.Net": {
+              "target": "Package",
+              "version": "[1.1.6, )"
             }
           },
           "imports": [
@@ -185,6 +197,10 @@
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
               "version": "[8.0.82, )"
+            },
+            "TSPLib.Net": {
+              "target": "Package",
+              "version": "[1.1.6, )"
             }
           },
           "imports": [

@@ -37,6 +37,9 @@
     <AppxPackagedFile Include="C:\Users\visti\source\repos\TSP APP\TSP Algorithms\bin\Debug\net8.0-windows10.0.19041.0\TSP_Algorithms.dll">
       <PackagePath>TSP_Algorithms.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\visti\source\repos\TSP APP\TSPLIB\bin\Debug\net8.0-windows10.0.19041.0\TSPLIB.dll">
+      <PackagePath>TSPLIB.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\visti\source\repos\TSP APP\TSP APP\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>TSP APP.exe</PackagePath>
     </AppxPackagedFile>
@@ -324,6 +327,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\visti\.nuget\packages\microsoft.windowsappsdk\1.5.240627000\lib\net6.0-windows10.0.18362.0\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\visti\.nuget\packages\tsplib.net\1.1.6\lib\netstandard2.0\TspLibNet.dll">
+      <PackagePath>TspLibNet.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\visti\.nuget\packages\microsoft.maui.controls.core\8.0.82\lib\net8.0-windows10.0.19041\ar\Microsoft.Maui.Controls.resources.dll">
       <PackagePath>ar\Microsoft.Maui.Controls.resources.dll</PackagePath>

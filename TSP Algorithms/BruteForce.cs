@@ -8,7 +8,7 @@ namespace TSP_Algorithms
     {
         public const string Name = "Brute Force";
 
-        public static (List<Point> points, float distance, Point homePoint) RunBruteForceAlgo(List<Point> Points)
+        public static (List<Point> points, float distance, Point homePoint) RunAlgo(List<Point> Points)
         {
             float minDist = float.MaxValue;
             var homePoint = Points[0];

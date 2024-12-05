@@ -11,60 +11,61 @@
                          VerticalOptions="FillAndExpand"
                          HorizontalOptions="FillAndExpand">
 
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
+        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
 
-            <Grid HorizontalOptions="FillAndExpand"
-                  VerticalOptions="CenterAndExpand"
-                  Padding="15">
-                <GraphicsView x:Name="graphicsView"
-                              Drawable="{Binding Drawable}"
-                              VerticalOptions="CenterAndExpand"
-                              HorizontalOptions="FillAndExpand"
-                              SizeChanged="OnSizeChanged" />
+                <Grid HorizontalOptions="FillAndExpand"
+                      VerticalOptions="CenterAndExpand"
+                      Padding="15">
+                    <GraphicsView x:Name="graphicsView"
+                                  Drawable="{Binding Drawable}"
+                                  VerticalOptions="CenterAndExpand"
+                                  HorizontalOptions="FillAndExpand"
+                                  SizeChanged="OnSizeChanged" />
+                </Grid>
             </Grid>
-        </Grid>
-
-        <HorizontalStackLayout HorizontalOptions="CenterAndExpand"
-                               x:Name="BottomSection">
-            <VerticalStackLayout Padding="10"
-                                 Spacing="10"
-                                 HorizontalOptions="Center">
-
-                <Button Text="Draw Random Points"
-                        x:Name="RandomPointBtn"
-                        Clicked="RandomPointBtnClicked"
-                        IsEnabled="False"
-                        FontSize="12" />
-
-                <Picker x:Name="AlgoPicker"
-                        Title="Select algorithm"
-                        ItemsSource="{Binding AlgorithmNames}" 
-                        SelectedIndexChanged="AlgoPicker_SelectedIndexChanged"/>
-
-                <Button x:Name="DrawPathBtn"
-                        Text="Generate Path"
-                        Clicked="DrawPathBtnClicked"
-                        FontSize="12"
-                        IsEnabled="False" />
-
-                <Button Text="Clear Points"
-                        x:Name="ClearPointsBtn"
-                        Clicked="ClearPointsBtnClicked"
-                        FontSize="12" />
-
-            </VerticalStackLayout>
-
-
             <VerticalStackLayout Padding="10"
                                  Spacing="6"
-                                 HorizontalOptions="Center">
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="CenterAndExpand">
 
+                <Label x:Name="DistanceLbl"
+                       Text="Total Distance: 0"
+                       FontSize="15" />
+
+                <Label x:Name="PointCountLbl"
+                       Text="Points Drawn: 0"
+                       FontSize="15" />
+
+                <Label x:Name="TicksElapsedLbl"
+                       Text="Ticks Elapsed: 0"
+                       FontSize="15" />
+
+                <Label x:Name="TimeElapsedLbl"
+                       Text="Time Elapsed: 0"
+                       FontSize="15" />
+
+                <Button x:Name="DisplayHullsBtn"
+                        Text="Display All Hulls"
+                        Clicked="DisplayHullsBtnClicked"
+                        FontSize="12"
+                        IsEnabled="False"
+                        IsVisible="False" />
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout HorizontalOptions="CenterAndExpand"
+                               x:Name="BottomSection"
+                               Spacing="10">
+
+            <VerticalStackLayout Padding="10"
+                                 Spacing="10">
                 <VerticalStackLayout>
                     <Label Text="Points to draw" />
                     <Entry x:Name="NumOfPointsEntry"
@@ -75,35 +76,49 @@
                            Completed="OnNumOfPointsEntryCompleted" />
                 </VerticalStackLayout>
 
-                <Label x:Name="DistanceLbl"
-                       Text="Total Distance: 0"
-                       FontSize="12" />
-
-                <Label x:Name="PointCountLbl"
-                       Text="Points Drawn: 0"
-                       FontSize="12" />
-
-                <Label x:Name="TicksElapsedLbl"
-                       Text="Ticks Elapsed: 0"
-                       FontSize="12" />
-
-                <Label x:Name="TimeElapsedLbl"
-                       Text="Time Elapsed: 0"
-                       FontSize="12" />
-
-                <Button x:Name="DisplayHullsBtn"
-                        Text="Display All Convex Hull"
-                        Clicked="DisplayHullsBtnClicked"
-                        FontSize="12"
+                <Button Text="Draw Random Points"
+                        x:Name="RandomPointBtn"
+                        Clicked="RandomPointBtnClicked"
                         IsEnabled="False"
-                        IsVisible="False" />
+                        FontSize="12" />
             </VerticalStackLayout>
+
+            <VerticalStackLayout Padding="10"
+                                 Spacing="10">
+                <Picker x:Name="TSPFilePicker"
+                        Title="Select TSPLIB file"
+                        ItemsSource="{Binding TSPFileNames}" />
+
+                <Button Text="Draw Points From File"
+                        x:Name="TSPLIBPointBtn"
+                        Clicked="TSPLIBPointBtnClicked"
+                        FontSize="12" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Padding="10"
+                                 Spacing="10"
+                                 HorizontalOptions="Center">
+
+                <Picker x:Name="AlgoPicker"
+                        Title="Select algorithm"
+                        ItemsSource="{Binding AlgorithmNames}"
+                        SelectedIndex="0"
+                        SelectedIndexChanged="AlgoPicker_SelectedIndexChanged" />
+
+                <Button x:Name="DrawPathBtn"
+                        Text="Generate Path"
+                        Clicked="DrawPathBtnClicked"
+                        FontSize="12"
+                        IsEnabled="False" />
+
+                <!--<Button Text="Clear Points"
+                        x:Name="ClearPointsBtn"
+                        Clicked="ClearPointsBtnClicked"
+                        FontSize="12" />-->
+
+            </VerticalStackLayout>
+
         </HorizontalStackLayout>
-        <Button Text="Algo Test Page"
-                x:Name="NavigateBtn"
-                Clicked="NavigateBtnClicked" />
     </VerticalStackLayout>
-
-
 
 </ContentPage>

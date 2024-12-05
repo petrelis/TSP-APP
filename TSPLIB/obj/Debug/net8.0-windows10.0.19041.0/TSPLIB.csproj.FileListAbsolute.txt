@@ -1,0 +1,13 @@
+C:\Users\visti\source\repos\TSP APP\TSPLIB\bin\Debug\net8.0-windows10.0.19041.0\TSPLIB.deps.json
+C:\Users\visti\source\repos\TSP APP\TSPLIB\bin\Debug\net8.0-windows10.0.19041.0\TSPLIB.dll
+C:\Users\visti\source\repos\TSP APP\TSPLIB\bin\Debug\net8.0-windows10.0.19041.0\TSPLIB.pdb
+C:\Users\visti\source\repos\TSP APP\TSPLIB\obj\Debug\net8.0-windows10.0.19041.0\TSPLIB.csproj.AssemblyReference.cache
+C:\Users\visti\source\repos\TSP APP\TSPLIB\obj\Debug\net8.0-windows10.0.19041.0\TSPLIB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\visti\source\repos\TSP APP\TSPLIB\obj\Debug\net8.0-windows10.0.19041.0\TSPLIB.AssemblyInfoInputs.cache
+C:\Users\visti\source\repos\TSP APP\TSPLIB\obj\Debug\net8.0-windows10.0.19041.0\TSPLIB.AssemblyInfo.cs
+C:\Users\visti\source\repos\TSP APP\TSPLIB\obj\Debug\net8.0-windows10.0.19041.0\TSPLIB.csproj.CoreCompileInputs.cache
+C:\Users\visti\source\repos\TSP APP\TSPLIB\obj\Debug\net8.0-windows10.0.19041.0\TSPLIB.sourcelink.json
+C:\Users\visti\source\repos\TSP APP\TSPLIB\obj\Debug\net8.0-windows10.0.19041.0\TSPLIB.dll
+C:\Users\visti\source\repos\TSP APP\TSPLIB\obj\Debug\net8.0-windows10.0.19041.0\refint\TSPLIB.dll
+C:\Users\visti\source\repos\TSP APP\TSPLIB\obj\Debug\net8.0-windows10.0.19041.0\TSPLIB.pdb
+C:\Users\visti\source\repos\TSP APP\TSPLIB\obj\Debug\net8.0-windows10.0.19041.0\ref\TSPLIB.dll

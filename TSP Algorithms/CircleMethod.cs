@@ -11,7 +11,7 @@ namespace TSP_Algorithms
     {
         public const string Name = "Circle Method";
 
-        public static (List<Point> points, float distance, Point homePoint) RunCircleMethodAlgo(List<Point> points)
+        public static (List<Point> points, float distance, Point homePoint) RunAlgo(List<Point> points)
         {
             if (points.Count <= 1)
                 return (points, 0, points[0]);

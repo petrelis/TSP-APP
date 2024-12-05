@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CMUWI0Jtm9c=",
+  "dgSpecHash": "cDWyXAvhFoI=",
   "success": true,
   "projectFilePath": "C:\\Users\\visti\\source\\repos\\TSP APP\\TSP Algorithms\\TSP_Algorithms.csproj",
   "expectedPackageFiles": [
@@ -28,6 +28,7 @@
     "C:\\Users\\visti\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.8\\microsoft.net.illink.tasks.8.0.8.nupkg.sha512",
     "C:\\Users\\visti\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",
     "C:\\Users\\visti\\.nuget\\packages\\microsoft.windowsappsdk\\1.5.240627000\\microsoft.windowsappsdk.1.5.240627000.nupkg.sha512",
+    "C:\\Users\\visti\\.nuget\\packages\\tsplib.net\\1.1.6\\tsplib.net.1.1.6.nupkg.sha512",
     "C:\\Users\\visti\\.nuget\\packages\\xamarin.android.glide\\4.15.1.2\\xamarin.android.glide.4.15.1.2.nupkg.sha512",
     "C:\\Users\\visti\\.nuget\\packages\\xamarin.android.glide.annotations\\4.15.1.2\\xamarin.android.glide.annotations.4.15.1.2.nupkg.sha512",
     "C:\\Users\\visti\\.nuget\\packages\\xamarin.android.glide.disklrucache\\4.15.1.2\\xamarin.android.glide.disklrucache.4.15.1.2.nupkg.sha512",

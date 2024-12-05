@@ -1,6 +1,8 @@
 ﻿using TSP_Algorithms;
 using TSP_Algorithms.Classes;
+using TSP_Algorithms.ConvexHull;
 using TSP_Algorithms.Drawables;
+using TSPLIB;
 
 namespace TSP_APP
 {
@@ -9,7 +11,11 @@ namespace TSP_APP
         static List<Point> Points = new List<Point>();
         int NumOfPoints = 0;
         CoordinateAxisDrawable drawable;
-        List<string> AlgorithmNames = [BruteForce.Name, NearestNeighbour.Name, CircleMethod.Name, ConvexHull.Name];
+        List<string> AlgorithmNames = [BruteForce.Name, NearestNeighbour.Name, CircleMethod.Name, SingleConvexHullHeuristic.Name, AllConvexHullsHeuristic.Name];
+        List<string?> TSPFileNames = TSPParser.GetTspFileNames();
+        ShortestPath currentPath = null;
+        bool displayHullsBtnClicked = false;
+        bool displayHullsBtnEnabled = false;
 
         public MainPage()
         {
@@ -18,6 +24,7 @@ namespace TSP_APP
             drawable = new CoordinateAxisDrawable(Points);
             graphicsView.Drawable = drawable;
             AlgoPicker.ItemsSource = AlgorithmNames;
+            TSPFilePicker.ItemsSource = TSPFileNames;
         }
         void RandomPointBtnClicked(object sender, EventArgs args)
         {
@@ -30,36 +37,35 @@ namespace TSP_APP
 
             drawable.UpdatePoints(Points, false, Points[0], false, null);
             graphicsView.Invalidate();
-            UpdateLabels(0, Points.Count + 1, 0, 0);
+            UpdateLabels(0, Points.Count, 0, 0);
         }
 
         void DrawPathBtnClicked(object sender, EventArgs args)
         {
             var selectedAlgoIndex = AlgoPicker.SelectedIndex;
 
-            ShortestPath path = null;
-            bool convexhull = false;
-
             var watch = new System.Diagnostics.Stopwatch();
             watch.Start();
 
-            switch(selectedAlgoIndex)
+            switch (selectedAlgoIndex)
             {
                 case 0:
-                    path = new ShortestPath(BruteForce.RunBruteForceAlgo(Points));
+                    currentPath = new ShortestPath(BruteForce.RunAlgo(Points));
                     break;
                 case 1:
-                    path = new ShortestPath(NearestNeighbour.RunNearestNeighbourAlgo(Points));
+                    currentPath = new ShortestPath(NearestNeighbour.RunAlgo(Points));
                     break;
                 case 2:
-                    path = new ShortestPath(CircleMethod.RunCircleMethodAlgo(Points));
+                    currentPath = new ShortestPath(CircleMethod.RunAlgo(Points));
                     break;
                 case 3:
-                    path = new ShortestPath(ConvexHull.RunConvexHullAlgo(Points));
-                    convexhull = true;
+                    currentPath = new ShortestPath(SingleConvexHullHeuristic.RunAlgo(Points));
+                    break;
+                case 4:
+                    currentPath = new ShortestPath(AllConvexHullsHeuristic.RunAlgo(Points));
                     break;
                 default:
-                    path = new ShortestPath(([new Point(0, 0)], 0, new Point(0, 0)));
+                    currentPath = new ShortestPath(([new Point(0, 0)], 0, new Point(0, 0)));
                     break;
             }
 
@@ -67,9 +73,18 @@ namespace TSP_APP
             var timeElapsed = watch.ElapsedMilliseconds;
             var ticksElapsed = watch.ElapsedTicks;
 
-            drawable.UpdatePoints(path.Points, true, path.HomePoint, path.IsConvexHull, path.AllConvexHulls);
+            if (currentPath.AllConvexHulls != null && currentPath.AllConvexHulls.Count > 0)
+                displayHullsBtnEnabled = true;
+            else
+                displayHullsBtnEnabled = false;
+            DisplayHullsBtn.IsEnabled = displayHullsBtnEnabled;
+            DisplayHullsBtn.IsVisible = displayHullsBtnEnabled;
+            DisplayHullsBtn.Text = "Display All Hulls";
+            displayHullsBtnClicked = false;
+
+            drawable.UpdatePoints(currentPath.Points, true, currentPath.HomePoint);
             graphicsView.Invalidate();
-            UpdateLabels(path.Distance, path.Points.Count, timeElapsed, ticksElapsed);
+            UpdateLabels(currentPath.Distance, Points.Count, timeElapsed, ticksElapsed);
 
         }
 
@@ -80,7 +95,6 @@ namespace TSP_APP
             Points.Clear();
             drawable.UpdatePoints(Points, false, new Point(0, 0));
             graphicsView.Invalidate();
-
         }
 
         void UpdateLabels()
@@ -94,15 +108,14 @@ namespace TSP_APP
         void UpdateLabels(float distance, int pointCount, long timeElapsed, long ticksElapsed)
         {
             DistanceLbl.Text = $"Total Distance: {distance:0.00}";
-            PointCountLbl.Text = $"Points Drawn: {pointCount - 1}";
+            PointCountLbl.Text = $"Points Drawn: {pointCount}";
             TicksElapsedLbl.Text = $"Ticks Elapsed: {ticksElapsed}";
             TimeElapsedLbl.Text = $"Miliseconds Elapsed: {timeElapsed}";
         }
 
         void OnNumOfPointsEntryChanged(object sender, EventArgs e)
         {
-            int num = 0;
-            if (int.TryParse(NumOfPointsEntry.Text, out num))
+            if (int.TryParse(NumOfPointsEntry.Text, out int num))
             {
                 NumOfPoints = num;
                 if (num > 2)
@@ -130,14 +143,6 @@ namespace TSP_APP
         private void AlgoPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
             DrawPathBtn.IsEnabled = true;
-            if (AlgoPicker.SelectedIndex == 3)
-            {
-                DisplayHullsBtn.IsVisible = true;
-            }
-            else
-            {
-                DisplayHullsBtn.IsVisible = false;
-            }
         }
 
         private async void NavigateBtnClicked(object sender, EventArgs e)
@@ -147,9 +152,40 @@ namespace TSP_APP
 
         private void DisplayHullsBtnClicked(object sender, EventArgs e)
         {
-            
+            if (!displayHullsBtnClicked)
+                drawable.UpdatePoints(currentPath.Points, false, currentPath.HomePoint, true, currentPath.AllConvexHulls);
+            else
+                drawable.UpdatePoints(currentPath.Points, true, currentPath.HomePoint, false, null);
+
+            graphicsView.Invalidate();
+
+            displayHullsBtnClicked = displayHullsBtnClicked == true ? false : true;
+
+            if (displayHullsBtnClicked)
+            {
+                DisplayHullsBtn.Text = "Display Path";
+            }
+            else
+                DisplayHullsBtn.Text = "Display All Hulls";
         }
 
+        private void TSPLIBPointBtnClicked(object sender, EventArgs e)
+        {
+            var selectedFileItem = TSPFilePicker.SelectedItem;
+            if (selectedFileItem == null)
+                return;
+
+            string selectedFileName = selectedFileItem.ToString();
+            Points.Clear();
+
+            (string dataName, List<Point> pp) = TSPParser.ParseTspFile(selectedFileName);
+            Points = pp;
+
+            drawable.UpdatePoints(Points, false, Points[0], false, null);
+            graphicsView.Invalidate();
+            UpdateLabels(0, Points.Count, 0, 0);
+
+        }
     }
 
 }

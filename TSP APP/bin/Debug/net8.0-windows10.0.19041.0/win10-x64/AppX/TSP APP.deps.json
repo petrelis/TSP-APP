@@ -12,6 +12,8 @@
           "Microsoft.Extensions.Logging.Debug": "8.0.0",
           "Microsoft.Maui.Controls": "8.0.82",
           "Microsoft.Maui.Controls.Compatibility": "8.0.82",
+          "TSPLIB": "1.0.0",
+          "TSPLib.Net": "1.1.6",
           "TSP_Algorithms": "1.0.0",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.34"
         },
@@ -446,10 +448,31 @@
           }
         }
       },
-      "TSP_Algorithms/1.0.0": {
+      "TSPLib.Net/1.1.6": {
+        "runtime": {
+          "lib/netstandard2.0/TspLibNet.dll": {
+            "assemblyVersion": "1.1.6.0",
+            "fileVersion": "1.1.6.0"
+          }
+        }
+      },
+      "TSPLIB/1.0.0": {
         "dependencies": {
           "Microsoft.Maui.Controls": "8.0.82",
           "Microsoft.Maui.Controls.Compatibility": "8.0.82"
+        },
+        "runtime": {
+          "TSPLIB.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "TSP_Algorithms/1.0.0": {
+        "dependencies": {
+          "Microsoft.Maui.Controls": "8.0.82",
+          "Microsoft.Maui.Controls.Compatibility": "8.0.82",
+          "TSPLib.Net": "1.1.6"
         },
         "runtime": {
           "TSP_Algorithms.dll": {
@@ -631,6 +654,18 @@
       "sha512": "sha512-qzzWG8rxZyzKzBuUdwr4ApezMINf+NT2b8EiEE5fchczNJJmDwlHImMWxX1pHK1W8Yby99alqLyC8DB0fIrhuA==",
       "path": "microsoft.windowsappsdk/1.5.240627000",
       "hashPath": "microsoft.windowsappsdk.1.5.240627000.nupkg.sha512"
+    },
+    "TSPLib.Net/1.1.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OY/FmP8805afvQamKF9+/78H0AHaQaEqA9/bebfFX6ADQxKg574Oep9WRMyKAZJlDShQm/Sme+oXUr8JT14pZw==",
+      "path": "tsplib.net/1.1.6",
+      "hashPath": "tsplib.net.1.1.6.nupkg.sha512"
+    },
+    "TSPLIB/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "TSP_Algorithms/1.0.0": {
       "type": "project",
