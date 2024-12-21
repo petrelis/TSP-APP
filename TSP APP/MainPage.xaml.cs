@@ -40,37 +40,14 @@ namespace TSP_APP
             UpdateLabels(0, Points.Count, 0, 0);
         }
 
-        void DrawPathBtnClicked(object sender, EventArgs args)
+        async void DrawPathBtnClicked(object sender, EventArgs args)
         {
             var selectedAlgoIndex = AlgoPicker.SelectedIndex;
 
             var watch = new System.Diagnostics.Stopwatch();
             watch.Start();
 
-            switch (selectedAlgoIndex)
-            {
-                case 0:
-                    currentPath = new ShortestPath(BruteForce.RunAlgo(Points));
-                    break;
-                case 1:
-                    currentPath = new ShortestPath(NearestNeighbour.RunAlgo(Points));
-                    break;
-                case 2:
-                    currentPath = new ShortestPath(CircleMethod.RunAlgo(Points));
-                    break;
-                case 3:
-                    currentPath = new ShortestPath(SingleConvexHullHeuristic.RunAlgo(Points));
-                    break;
-                case 4:
-                    currentPath = new ShortestPath(AllConvexHullsHeuristic.RunAlgo(Points));
-                    break;
-                case 5:
-                    currentPath = new ShortestPath(GeneticAlgorithm.RunAlgo(Points));
-                    break;
-                default:
-                    currentPath = new ShortestPath(([new Point(0, 0)], 0, new Point(0, 0)));
-                    break;
-            }
+            await RunSelectedAlgorithmAsync(selectedAlgoIndex);
 
             watch.Stop();
             var timeElapsed = watch.ElapsedMilliseconds;
@@ -188,6 +165,38 @@ namespace TSP_APP
             graphicsView.Invalidate();
             UpdateLabels(0, Points.Count, 0, 0);
 
+        }
+
+        private async Task RunSelectedAlgorithmAsync(int selectedAlgoIndex)
+        {
+            try
+            {
+                IsBusy = true;
+
+                var result = await Task.Run(() =>
+                {
+                    return selectedAlgoIndex switch
+                    {
+                        0 => new ShortestPath(BruteForce.RunAlgo(Points)),
+                        1 => new ShortestPath(NearestNeighbour.RunAlgo(Points)),
+                        2 => new ShortestPath(CircleMethod.RunAlgo(Points)),
+                        3 => new ShortestPath(SingleConvexHullHeuristic.RunAlgo(Points)),
+                        4 => new ShortestPath(AllConvexHullsHeuristic.RunAlgo(Points)),
+                        5 => new ShortestPath(GeneticAlgorithm.RunAlgo(Points)),
+                        _ => new ShortestPath((new List<Point> { new Point(0, 0) }, 0, new Point(0, 0))),
+                    };
+                });
+
+                currentPath = result;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+            finally
+            {
+                IsBusy = false;
+            }
         }
     }
 

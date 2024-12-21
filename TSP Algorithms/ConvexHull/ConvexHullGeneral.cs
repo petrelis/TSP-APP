@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,24 +38,34 @@ namespace TSP_Algorithms.ConvexHull
             double lowestY = double.MaxValue;
             int indexOfLowestY = 0;
 
-            for (int i = 1; i<workingPoints.Count; i++)
+            Parallel.For(1, workingPoints.Count, i =>
             {
-                if (workingPoints[i].Y < lowestY || (workingPoints[i].Y == lowestY && workingPoints[i].X < workingPoints[indexOfLowestY].X))
+                double y = workingPoints[i].Y;
+                double x = workingPoints[i].X;
+
+                lock (workingPoints)
                 {
-                    lowestY = workingPoints[i].Y;
-                    indexOfLowestY = i;
+                    if (y < lowestY || (y == lowestY && x < workingPoints[indexOfLowestY].X))
+                    {
+                        lowestY = y;
+                        indexOfLowestY = i;
+                    }
                 }
-            }
+            });
             //Set lowest Y value point as PPoint
             Point PPoint = workingPoints[indexOfLowestY];
 
-            //Calculate angles PPoint and all other points make with the positive X-axis
-            List<PointWithAngle> pointsWithAngles = new List<PointWithAngle>();
-            foreach (var point in workingPoints)
+            ConcurrentBag<PointWithAngle> pointsWithAnglesCBag = new ConcurrentBag<PointWithAngle>();
+
+            Parallel.ForEach(workingPoints, point =>
             {
                 double angle = 180 + Math.Atan2(point.Y - PPoint.Y, point.X - PPoint.X) * 180 / Math.PI;
-                pointsWithAngles.Add(new PointWithAngle(point, angle));
-            }
+                pointsWithAnglesCBag.Add(new PointWithAngle(point, angle));
+            });
+
+            // Convert the ConcurrentBag back to a List if needed
+            var pointsWithAngles = pointsWithAnglesCBag.ToList();
+
             //Order pointsWithAngles according to their angle with PPoint and positive X-axis
             pointsWithAngles = pointsWithAngles.OrderBy(pwa => pwa.Angle).Reverse().ToList();
 
@@ -113,11 +124,9 @@ namespace TSP_Algorithms.ConvexHull
             if (allConvexHulls == null || allConvexHulls.Count == 0)
                 return new List<Point>();
 
-            //Create a working copy to avoid modifying the input
             var workingHulls = new List<List<Point>>(allConvexHulls);
             var currentPath = workingHulls[0];
 
-            //Iteratively connect hulls
             for (int i = 1; i < workingHulls.Count; i++)
             {
                 currentPath = ConnectTwoConvexHulls(currentPath, workingHulls[i]);
@@ -158,11 +167,12 @@ namespace TSP_Algorithms.ConvexHull
 
         private static (Point point, int index) FindBestInsertion(List<Point> hull, List<Point> candidates, DistanceCache distanceCache)
         {
+            object lockObject = new object();
             double bestCost = double.MaxValue;
             Point bestPoint = new();
             int bestIndex = -1;
 
-            foreach (var candidate in candidates)
+            Parallel.ForEach(candidates, candidate =>
             {
                 for (int i = 0; i < hull.Count; i++)
                 {
@@ -171,17 +181,20 @@ namespace TSP_Algorithms.ConvexHull
 
                     // Calculate insertion cost
                     var insertionCost = distanceCache.GetDistance(hull[i], candidate) +
-                                      distanceCache.GetDistance(candidate, hull[next]) -
-                                      currentEdgeLength;
+                                        distanceCache.GetDistance(candidate, hull[next]) -
+                                        currentEdgeLength;
 
-                    if (insertionCost < bestCost)
+                    lock (lockObject)
                     {
-                        bestCost = insertionCost;
-                        bestPoint = candidate;
-                        bestIndex = next;
+                        if (insertionCost < bestCost)
+                        {
+                            bestCost = insertionCost;
+                            bestPoint = candidate;
+                            bestIndex = next;
+                        }
                     }
                 }
-            }
+            });
 
             return (bestPoint, bestIndex);
         }

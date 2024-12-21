@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TSP APP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+03efea4f274a31e339f3c6f8f4823a0a3bea919c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+802a5fa07d7e2705d38d0f29dea5e3900d84e2a5")]
 [assembly: System.Reflection.AssemblyProductAttribute("TSP APP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TSP APP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

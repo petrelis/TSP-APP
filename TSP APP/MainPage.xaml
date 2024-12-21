@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TSP_APP.MainPage">
 
-
-
+    
     <VerticalStackLayout x:Name="UsableWindow"
                          Padding="10"
                          Spacing="10"
@@ -110,6 +109,9 @@
                         Clicked="DrawPathBtnClicked"
                         FontSize="12"
                         IsEnabled="False" />
+
+                <ActivityIndicator IsRunning="False"
+                                   Color="Blue" />
 
                 <!--<Button Text="Clear Points"
                         x:Name="ClearPointsBtn"

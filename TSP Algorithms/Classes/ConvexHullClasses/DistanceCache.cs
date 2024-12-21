@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,20 +9,21 @@ namespace TSP_Algorithms.Classes.ConvexHullClasses
 {
     public class DistanceCache
     {
-        //Key of two points and value of distance
-        private readonly Dictionary<(Point, Point), double> _cache = new();
+        private readonly ConcurrentDictionary<(Point, Point), double> _cache = new();
 
         public double GetDistance(Point p1, Point p2)
         {
             var key = (p1, p2);
-            //if distance between two points is not in the dictionary
-            if (!_cache.ContainsKey(key))
+
+            // Try to get the distance from the cache first
+            if (!_cache.TryGetValue(key, out double distance))
             {
-                //add point and distance kvp
-                _cache[key] = p1.Distance(p2);
+                // If not found, calculate the distance and add it to the cache
+                distance = p1.Distance(p2);
+                _cache[key] = distance;
             }
-            //return stored distance between the two points
-            return _cache[key];
+
+            return distance;
         }
     }
 }

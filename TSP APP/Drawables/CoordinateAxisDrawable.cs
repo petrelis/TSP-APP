@@ -42,10 +42,10 @@ namespace TSP_Algorithms.Drawables
             canvas.StrokeColor = Colors.White;
             canvas.StrokeSize = 2;
 
-            // Draw horizontal axis
+            //Draw horizontal axis
             canvas.DrawLine(0, dirtyRect.Height / 2, dirtyRect.Width, dirtyRect.Height / 2);
 
-            // Draw vertical axis
+            //Draw vertical axis
             canvas.DrawLine(dirtyRect.Width / 2, 0, dirtyRect.Width / 2, dirtyRect.Height);
 
 
@@ -55,9 +55,9 @@ namespace TSP_Algorithms.Drawables
                 if (_convexHulls != null || _convexHulls.Count < 1)
                 {
                     List<Point> chPointstoDraw = new List<Point>();
-                    foreach(var ch in _convexHulls)
+                    foreach (var ch in _convexHulls)
                     {
-                        foreach(var pt in ch)
+                        foreach (var pt in ch)
                         {
                             chPointstoDraw.Add(pt);
                         }
@@ -65,8 +65,10 @@ namespace TSP_Algorithms.Drawables
                     chPointstoDraw = ScalePointsToFitRectangle(chPointstoDraw, dirtyRect);
 
                     int j = 0;
+                    int i = 0;
                     foreach (var ch in _convexHulls)
                     {
+                        canvas.StrokeColor = Colors.White;
                         foreach (var chpt in ch)
                         {
                             canvas.DrawCircle(chPointstoDraw[j], 3.0);
@@ -74,19 +76,20 @@ namespace TSP_Algorithms.Drawables
                         }
 
                         canvas.StrokeColor = Colors.Pink;
-                        for (int i = 0; i < chPointstoDraw.Count - 1; i++)
+                        for (int ii = i; ii < i + ch.Count - 1; ii++)
                         {
-                            canvas.DrawLine(chPointstoDraw[i], chPointstoDraw[i + 1]);
+                            var p1 = chPointstoDraw[ii];
+                            var p2 = chPointstoDraw[ii + 1];
+                            canvas.DrawLine(p1, p2);
                         }
+                        i += ch.Count;
                     }
-
                 }
-
                 return;
             }
 
             List<Point> pointsToDraw = ScalePointsToFitRectangle(_points, dirtyRect);
-            foreach(var ptd in pointsToDraw)
+            foreach (var ptd in pointsToDraw)
             {
                 canvas.DrawCircle(ptd, 3.0);
             }
@@ -114,17 +117,17 @@ namespace TSP_Algorithms.Drawables
             if (points == null || points.Count == 0)
                 return new List<Point>();
 
-            // Find the bounding box of the original points
+            //Find the bounding box of the original points
             double minX = points.Min(p => p.X);
             double maxX = points.Max(p => p.X);
             double minY = points.Min(p => p.Y);
             double maxY = points.Max(p => p.Y);
 
-            // Calculate the original width and height of the points
+            //Calculate the original width and height of the points
             double originalWidth = maxX - minX;
             double originalHeight = maxY - minY;
 
-            // If all points are at the same location, center a single point
+            //If all points are at the same location, center a single point
             if (originalWidth == 0 && originalHeight == 0)
             {
                 return new List<Point>
