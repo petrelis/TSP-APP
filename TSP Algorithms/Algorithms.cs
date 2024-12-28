@@ -10,8 +10,8 @@ namespace TSP_Algorithms
         {
             Random rnd = new Random();
 
-            float x = mult - rnd.NextSingle() * mult * 2;
-            float y = mult - rnd.NextSingle() * mult * 2;
+            float x = mult - rnd.NextSingle() * rnd.NextSingle() * mult * 2;
+            float y = mult - rnd.NextSingle() * rnd.NextSingle() * mult * 2;
 
             return new Point(x, y);
         }

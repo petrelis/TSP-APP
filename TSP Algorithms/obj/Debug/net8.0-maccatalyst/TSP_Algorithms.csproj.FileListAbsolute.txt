@@ -38,3 +38,23 @@ C:\Users\visti\source\repos\TSP APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\
 C:\Users\visti\source\repos\TSP APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\refint\TSP_Algorithms.dll
 C:\Users\visti\source\repos\TSP APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\TSP_Algorithms.pdb
 C:\Users\visti\source\repos\TSP APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\ref\TSP_Algorithms.dll
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\bin\Debug\net8.0-maccatalyst\TSP_Algorithms.dll
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\bin\Debug\net8.0-maccatalyst\TSP_Algorithms.pdb
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\actool\_PartialAppManifest.items
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\actool\_BundleResourceWithLogicalName.items
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\actool\_ProcessedImageAssetsPath.items
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\coremlc\_PartialAppManifest.items
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\coremlc\_BundleResourceWithLogicalName.items
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\coremlc\_ProcessedCoreMLModelsPath.items
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\_ProcessedBundleResourcesPath.items
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\_ProcessedContentPath.items
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\TSP_Algorithms.csproj.AssemblyReference.cache
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\TSP_Algorithms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\TSP_Algorithms.AssemblyInfoInputs.cache
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\TSP_Algorithms.AssemblyInfo.cs
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\TSP_Algorithms.csproj.CoreCompileInputs.cache
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\TSP_Algorithms.sourcelink.json
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\TSP_Algorithms.dll
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\refint\TSP_Algorithms.dll
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\TSP_Algorithms.pdb
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-maccatalyst\ref\TSP_Algorithms.dll

@@ -30,14 +30,18 @@ namespace TSP_APP
         {
             Points.Clear();
 
-            for (int i = 0; i < NumOfPoints; i++)
-            {
-                Points.Add(Algorithms.GenerateRandomPoint(5));
-            }
+            //for (int i = 0; i < NumOfPoints; i++)
+            //{
+            //    Points.Add(Algorithms.GenerateRandomPoint(5));
+            //}
 
-            drawable.UpdatePoints(Points, false, Points[0], false, null);
-            graphicsView.Invalidate();
-            UpdateLabels(0, Points.Count, 0, 0);
+            //drawable.UpdatePoints(Points, false, Points[0], false, null);
+            //graphicsView.Invalidate();
+            //UpdateLabels(0, Points.Count, 0, 0);
+
+            var benchmark = new AlgoBenchmark("C:\\Users\\badun\\OneDrive\\Documents\\TSP-APP\\TSP APP\\BenchmarkResults\\");
+            int[] pointCounts = new[] { 100, 500, 1000, 5000, 10000 };
+            benchmark.RunBenchmark(pointCounts, repetitionsPerCount: 1);
         }
 
         async void DrawPathBtnClicked(object sender, EventArgs args)

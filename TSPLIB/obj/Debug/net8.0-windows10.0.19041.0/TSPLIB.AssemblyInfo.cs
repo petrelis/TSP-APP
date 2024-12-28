@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TSPLIB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+802a5fa07d7e2705d38d0f29dea5e3900d84e2a5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e325a071b71f7202e04676aff477debb071bf6d4")]
 [assembly: System.Reflection.AssemblyProductAttribute("TSPLIB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TSPLIB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

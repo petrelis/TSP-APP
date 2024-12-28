@@ -18,3 +18,23 @@ C:\Users\visti\source\repos\TSP APP\TSPLIB\obj\Debug\net8.0-maccatalyst\TSPLIB.d
 C:\Users\visti\source\repos\TSP APP\TSPLIB\obj\Debug\net8.0-maccatalyst\refint\TSPLIB.dll
 C:\Users\visti\source\repos\TSP APP\TSPLIB\obj\Debug\net8.0-maccatalyst\TSPLIB.pdb
 C:\Users\visti\source\repos\TSP APP\TSPLIB\obj\Debug\net8.0-maccatalyst\ref\TSPLIB.dll
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSPLIB\bin\Debug\net8.0-maccatalyst\TSPLIB.dll
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSPLIB\bin\Debug\net8.0-maccatalyst\TSPLIB.pdb
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSPLIB\obj\Debug\net8.0-maccatalyst\actool\_PartialAppManifest.items
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSPLIB\obj\Debug\net8.0-maccatalyst\actool\_BundleResourceWithLogicalName.items
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSPLIB\obj\Debug\net8.0-maccatalyst\actool\_ProcessedImageAssetsPath.items
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSPLIB\obj\Debug\net8.0-maccatalyst\coremlc\_PartialAppManifest.items
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSPLIB\obj\Debug\net8.0-maccatalyst\coremlc\_BundleResourceWithLogicalName.items
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSPLIB\obj\Debug\net8.0-maccatalyst\coremlc\_ProcessedCoreMLModelsPath.items
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSPLIB\obj\Debug\net8.0-maccatalyst\_ProcessedBundleResourcesPath.items
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSPLIB\obj\Debug\net8.0-maccatalyst\_ProcessedContentPath.items
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSPLIB\obj\Debug\net8.0-maccatalyst\TSPLIB.csproj.AssemblyReference.cache
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSPLIB\obj\Debug\net8.0-maccatalyst\TSPLIB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSPLIB\obj\Debug\net8.0-maccatalyst\TSPLIB.AssemblyInfoInputs.cache
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSPLIB\obj\Debug\net8.0-maccatalyst\TSPLIB.AssemblyInfo.cs
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSPLIB\obj\Debug\net8.0-maccatalyst\TSPLIB.csproj.CoreCompileInputs.cache
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSPLIB\obj\Debug\net8.0-maccatalyst\TSPLIB.sourcelink.json
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSPLIB\obj\Debug\net8.0-maccatalyst\TSPLIB.dll
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSPLIB\obj\Debug\net8.0-maccatalyst\refint\TSPLIB.dll
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSPLIB\obj\Debug\net8.0-maccatalyst\TSPLIB.pdb
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSPLIB\obj\Debug\net8.0-maccatalyst\ref\TSPLIB.dll

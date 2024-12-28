@@ -24,3 +24,16 @@ C:\Users\visti\source\repos\TSP APP\TSP Algorithms\obj\Debug\net8.0-windows10.0.
 C:\Users\visti\source\repos\TSP APP\TSP Algorithms\obj\Debug\net8.0-windows10.0.19041.0\refint\TSP_Algorithms.dll
 C:\Users\visti\source\repos\TSP APP\TSP Algorithms\obj\Debug\net8.0-windows10.0.19041.0\TSP_Algorithms.pdb
 C:\Users\visti\source\repos\TSP APP\TSP Algorithms\obj\Debug\net8.0-windows10.0.19041.0\ref\TSP_Algorithms.dll
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-windows10.0.19041.0\TSP_Algorithms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-windows10.0.19041.0\TSP_Algorithms.AssemblyInfoInputs.cache
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-windows10.0.19041.0\TSP_Algorithms.AssemblyInfo.cs
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-windows10.0.19041.0\TSP_Algorithms.csproj.CoreCompileInputs.cache
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-windows10.0.19041.0\TSP_Algorithms.sourcelink.json
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-windows10.0.19041.0\TSP_Algorithms.dll
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-windows10.0.19041.0\refint\TSP_Algorithms.dll
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-windows10.0.19041.0\TSP_Algorithms.pdb
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\bin\Debug\net8.0-windows10.0.19041.0\TSP_Algorithms.deps.json
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\bin\Debug\net8.0-windows10.0.19041.0\TSP_Algorithms.dll
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\bin\Debug\net8.0-windows10.0.19041.0\TSP_Algorithms.pdb
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-windows10.0.19041.0\TSP_Algorithms.csproj.AssemblyReference.cache
+C:\Users\badun\OneDrive\Documents\TSP-APP\TSP Algorithms\obj\Debug\net8.0-windows10.0.19041.0\ref\TSP_Algorithms.dll

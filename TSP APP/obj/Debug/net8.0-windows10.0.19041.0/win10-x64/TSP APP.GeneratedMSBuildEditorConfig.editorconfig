@@ -8,41 +8,51 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TSP_APP
-build_property.ProjectDir = C:\Users\visti\source\repos\TSP APP\TSP APP\
+build_property.ProjectDir = C:\Users\badun\OneDrive\Documents\TSP-APP\TSP APP\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTAotOptimizerEnabled = true
+build_property.CsWinRTAotExportsEnabled = 
+build_property.CsWinRTRcwFactoryFallbackGeneratorForceOptIn = 
+build_property.CsWinRTRcwFactoryFallbackGeneratorForceOptOut = 
+build_property.CsWinRTCcwLookupTableGeneratorEnabled = true
+build_property.CsWinRTMergeReferencedActivationFactories = 
+build_property.CsWinRTAotWarningLevel = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/visti/source/repos/TSP APP/TSP APP/AlgorithmTestPage.xaml]
+[C:/Users/badun/OneDrive/Documents/TSP-APP/TSP APP/AlgorithmTestPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TSP_APP.AlgorithmTestPage.xaml
 build_metadata.AdditionalFiles.TargetPath = AlgorithmTestPage.xaml
 build_metadata.AdditionalFiles.RelativePath = AlgorithmTestPage.xaml
 
-[C:/Users/visti/source/repos/TSP APP/TSP APP/App.xaml]
+[C:/Users/badun/OneDrive/Documents/TSP-APP/TSP APP/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TSP_APP.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/visti/source/repos/TSP APP/TSP APP/AppShell.xaml]
+[C:/Users/badun/OneDrive/Documents/TSP-APP/TSP APP/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TSP_APP.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/visti/source/repos/TSP APP/TSP APP/MainPage.xaml]
+[C:/Users/badun/OneDrive/Documents/TSP-APP/TSP APP/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TSP_APP.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[C:/Users/visti/source/repos/TSP APP/TSP APP/Resources/Styles/Colors.xaml]
+[C:/Users/badun/OneDrive/Documents/TSP-APP/TSP APP/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TSP_APP.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/visti/source/repos/TSP APP/TSP APP/Resources/Styles/Styles.xaml]
+[C:/Users/badun/OneDrive/Documents/TSP-APP/TSP APP/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = TSP_APP.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml

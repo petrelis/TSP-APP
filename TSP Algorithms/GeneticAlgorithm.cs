@@ -4,19 +4,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TSP_Algorithms.ConvexHull;
 
 namespace TSP_Algorithms
 {
-    public class GeneticAlgorithm
+    public class GeneticAlgorithm : ConvexHullGeneral
     {
         public const string Name = "Genetic Algorithm";
 
         public static (List<Point> points, float distance, Point homePoint) RunAlgo(List<Point> points)
         {
             var workingPoints = new List<Point>(points);
-            var population = GenerateRandomPopulation(workingPoints);
+            var population = GenerateConvexHullPopulation(workingPoints);
 
-            int generationCount = 1500;
+            int generationCount = 2000;
             if (points.Count > 1500)
                 generationCount = points.Count;
 
@@ -26,6 +27,7 @@ namespace TSP_Algorithms
                 population = ProduceNewGeneration(population);
                 population = MutatePopulation(population);
 
+                /*
                 double minDistt = double.MaxValue;
                 List<Point> shortestPathh = new List<Point>();
                 foreach (var path in population)
@@ -37,21 +39,28 @@ namespace TSP_Algorithms
                         shortestPathh = path;
                     }
                 }
+                */
             }
 
             double minDist = double.MaxValue;
             List<Point> shortestPath = new List<Point>();
-            foreach (var path in population)
+            object lockObject = new object(); // Lock object to handle critical sections
+            Parallel.ForEach(population, path =>
             {
                 var dist = Algorithms.CalculatePathDistance(path);
-                if (dist < minDist)
+                lock (lockObject)
                 {
-                    minDist = dist;
-                    shortestPath = path;
+                    if (dist < minDist)
+                    {
+                        minDist = dist;
+                        shortestPath = path;
+                    }
                 }
-            }
+            });
+
 
             shortestPath = Algorithms.TwoOpt(shortestPath);
+            minDist = Algorithms.CalculatePathDistance(shortestPath);
 
             return (shortestPath, (float)minDist, points[0]);
         }
@@ -78,6 +87,53 @@ namespace TSP_Algorithms
 
             return randomPaths;
         }
+
+        private static List<List<Point>> GenerateConvexHullPopulation(List<Point> points)
+        {
+            Random rnd = new Random();
+            int randomPathCount = 1000;
+            if (points.Count > randomPathCount * 10)
+            {
+                randomPathCount = points.Count / 10;
+            }
+            var workingPoints = new List<Point>(points);
+
+            (List<Point> convexHull, List<Point> restPoints) = FindConvexHull(workingPoints);
+
+            //Create and fill rp with first and last convexHull points and all restPoints and empty positions for other convexHull points
+            var convexHullNull = convexHull.Skip(1).Take(convexHull.Count - 2).ToList();
+            for(int i = 0; i  < convexHullNull.Count; i++)
+            {
+                convexHullNull[i] = new Point(0, 0);
+            }
+            restPoints.AddRange(convexHullNull);
+            var rp = new List<Point>();
+            rp.Add(convexHull[0]);
+            rp.AddRange(restPoints);
+            rp.Add(convexHull[^1]);
+            Point checkPoint = new Point(0, 0);
+
+            List<List<Point>> randomPaths = new List<List<Point>>();
+            for(int i = 0; i < randomPathCount; i++)
+            {
+                var randomPathArr = rp.ToArray();
+                rnd.Shuffle(new Span<Point>(randomPathArr, 1, randomPathArr.Length - 2));
+                int k = 1;
+                for (int j = 0; j < randomPathArr.Length; j++)
+                {
+                    if (randomPathArr[j] == checkPoint)
+                    {
+                        randomPathArr[j] = convexHull[k];
+                        k++;
+                    }
+                }
+                List<Point> randomPath = randomPathArr.ToList();
+                randomPaths.Add(randomPath);
+            }
+
+            return randomPaths;
+        }
+
 
         private static List<List<Point>> EliminateHalfPopulation(List<List<Point>> population)
         {
@@ -116,8 +172,8 @@ namespace TSP_Algorithms
 
                 for (int j = 0; j < 2; j++)
                 {
-                    offsprings.Add(PMXCrossover(Parent1, Parent2));
-                    offsprings.Add(PMXCrossover(Parent2, Parent1));
+                    offsprings.Add(UniformCrossover(Parent1, Parent2));
+                    offsprings.Add(UniformCrossover(Parent2, Parent1));
                 }
             });
 
