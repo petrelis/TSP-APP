@@ -139,7 +139,7 @@ namespace TSP_Algorithms
         {
             List<List<Point>> survivors = new List<List<Point>>();
             int midway = (population.Count - 1) / 2;
-            object lockObj = new object(); // To synchronize access to the survivors list
+            object lockObj = new object(); //To synchronize access to the survivors list
 
             Parallel.For(0, midway + 1, i =>
             {
@@ -180,7 +180,7 @@ namespace TSP_Algorithms
             return offsprings.ToList();
         }
 
-        //private static List<List<Point>> ProduceNewGeneration(List<List<Point>> population)
+        //private static List<List<Point>> ProduceNewGeneration(List<List<Point>> population) //non parallel version
         //{
         //    List<List<Point>> offsprings = new List<List<Point>>();
         //    int midway = (population.Count - 1) / 2;
@@ -192,8 +192,8 @@ namespace TSP_Algorithms
 
         //        for (int j = 0; j < 2; j++)
         //        {
-        //            offsprings.Add(PMXCrossover(Parent1, Parent2));
-        //            offsprings.Add(PMXCrossover(Parent2, Parent1));
+        //            offsprings.Add(UniformCrossover(Parent1, Parent2));
+        //            offsprings.Add(UniformCrossover(Parent2, Parent1));
         //        }
         //    }
 
@@ -232,6 +232,7 @@ namespace TSP_Algorithms
                 }
             }
 
+            //Fill remaining empty positions in offsprint with p2 elements
             for (int i = 0; i < length; i++)
             {
                 if (offspring[i] == new Point(0, 0))
@@ -239,56 +240,6 @@ namespace TSP_Algorithms
                     offspring[i] = p2[0];
                     p2.RemoveAt(0);
                 }
-            }
-
-            return offspring.ToList();
-        }
-
-        private static List<Point> PMXCrossover(List<Point> Parent1, List<Point> Parent2)
-        {
-            if (Parent1.Count != Parent2.Count)
-                throw new ArgumentException("Both parents must have the same number of elements.");
-
-            Random rnd = new Random();
-            int length = Parent1.Count;
-
-            // Select crossover points
-            int crossoverStart = rnd.Next(1, length - 2);
-            int crossoverEnd = rnd.Next(crossoverStart + 1, length);
-
-            // Create mappings for the crossover segment
-            Dictionary<Point, Point> mappingP1 = new Dictionary<Point, Point>();
-            Dictionary<Point, Point> mappingP2 = new Dictionary<Point, Point>();
-            for (int i = crossoverStart; i < crossoverEnd; i++)
-            {
-                mappingP1[Parent1[i]] = Parent2[i];
-                mappingP2[Parent2[i]] = Parent1[i];
-            }
-
-            // Initialize offspring with default values (null)
-            Point[] offspring = new Point[length];
-
-            // Copy crossover segment directly
-            for (int i = crossoverStart; i < crossoverEnd; i++)
-            {
-                offspring[i] = Parent1[i];
-            }
-
-            // Fill in the remaining positions
-            for (int i = 0; i < length; i++)
-            {
-                if (i >= crossoverStart && i < crossoverEnd)
-                    continue; // Skip crossover segment
-
-                Point value = Parent2[i];
-
-                // Resolve conflicts using the mapping
-                while (mappingP1.ContainsKey(value))
-                {
-                    value = mappingP1[value];
-                }
-
-                offspring[i] = value;
             }
 
             return offspring.ToList();

@@ -20,7 +20,7 @@ namespace TSP_Algorithms
 
     public class AlgoBenchmark
     {
-        private static Random rnd = new Random(32); // Fixed seed for reproducibility
+        private static Random rnd = new Random(32);
         private readonly string outputDirectory;
 
         public AlgoBenchmark(string outputDir)
@@ -29,29 +29,26 @@ namespace TSP_Algorithms
             Directory.CreateDirectory(outputDir);
         }
 
-        public void RunBenchmark(int[] pointCounts, int repetitionsPerCount = 1)
+        public void RunBenchmark(int[] pointCounts, int repetitionsPerCount)
         {
             foreach (int pointCount in pointCounts)
             {
                 var benchmarkResults = new List<BenchmarkResult>();
-
-                for (int rep = 0; rep < repetitionsPerCount; rep++)
+                List<Point> points = new List<Point>();
+                for (int i = 0; i < pointCount; i++)
                 {
-                    // Generate random points
-                    List<Point> points = new List<Point>();
-                    for(int i = 0; i < pointCount; i++)
-                    {
-                        points.Add(GenerateRandomPoint(1000));
-                    }
+                    points.Add(GenerateRandomPoint(1000));
+                }
 
-                    // Measure execution time
+                for (int rep = 1; rep <= repetitionsPerCount; rep++)
+                {
                     var stopwatch = Stopwatch.StartNew();
-                    var result = new ShortestPath(SingleConvexHullHeuristic.RunAlgo(points));
+                    var result = new ShortestPath(GeneticAlgorithm.RunAlgo(points));
                     stopwatch.Stop();
 
                     var benchmarkResult = new BenchmarkResult
                     {
-                        AlgoName = "SingleConvexHullHeuristic",
+                        AlgoName = "GeneticAlgorithm",
                         NumberOfPoints = pointCount,
                         ExecutionTimeMs = stopwatch.ElapsedMilliseconds,
                         TotalDistance = result.Distance,
@@ -60,8 +57,7 @@ namespace TSP_Algorithms
                     benchmarkResults.Add(benchmarkResult);
                 }
 
-                // Save results to JSON file
-                string fileName = Path.Combine(outputDirectory, $"benchmark_results_{pointCount}points_SCHH.json");
+                string fileName = Path.Combine(outputDirectory, $"GA_benchmark_results_{pointCount}points1.json");
                 string jsonString = JsonSerializer.Serialize(benchmarkResults, new JsonSerializerOptions
                 {
                     WriteIndented = true

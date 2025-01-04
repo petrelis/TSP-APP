@@ -15,10 +15,10 @@ namespace TSP_Algorithms.Classes.ConvexHullClasses
         {
             var key = (p1, p2);
 
-            // Try to get the distance from the cache first
+            //Try to get distance form the cache
             if (!_cache.TryGetValue(key, out double distance))
             {
-                // If not found, calculate the distance and add it to the cache
+                //If not found calculate the distance and add it to the cache
                 distance = p1.Distance(p2);
                 _cache[key] = distance;
             }

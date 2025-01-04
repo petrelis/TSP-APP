@@ -81,9 +81,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="AlgorithmTestPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
+	  <Folder Include="BenchmarkResults\" />
 	</ItemGroup>
 
 </Project>

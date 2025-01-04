@@ -10,8 +10,8 @@ namespace TSP_Algorithms
         {
             Random rnd = new Random();
 
-            float x = mult - rnd.NextSingle() * rnd.NextSingle() * mult * 2;
-            float y = mult - rnd.NextSingle() * rnd.NextSingle() * mult * 2;
+            float x = mult - rnd.NextSingle() * mult * 2;
+            float y = mult - rnd.NextSingle() * mult * 2;
 
             return new Point(x, y);
         }
@@ -24,11 +24,10 @@ namespace TSP_Algorithms
             {
                 improvement = false;
 
-                for (int i = 1; i < path.Count - 2; i++) // Avoid the first and last city
+                for (int i = 1; i < path.Count - 2; i++)
                 {
-                    for (int j = i + 1; j < path.Count - 1; j++) // Avoid overlapping segments
+                    for (int j = i + 1; j < path.Count - 1; j++)
                     {
-                        // Calculate distances for current and swapped segments
                         double currentDistance = path[i - 1].Distance(path[i]) + 
                                                  path[j].Distance(path[j + 1]);
                         double newDistance = path[i - 1].Distance(path[j]) +
@@ -36,7 +35,6 @@ namespace TSP_Algorithms
 
                         if (newDistance < currentDistance)
                         {
-                            // Reverse the segment between i and j
                             path.Reverse(i, j - i + 1);
                             improvement = true;
                         }

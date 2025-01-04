@@ -39,7 +39,10 @@ namespace TSP_Algorithms.Drawables
 
         public void Draw(ICanvas canvas, RectF dirtyRect)
         {
-            canvas.StrokeColor = Colors.White;
+            canvas.FillColor = Colors.White;
+            canvas.FillRectangle(dirtyRect);
+
+            canvas.StrokeColor = Colors.Black;
             canvas.StrokeSize = 2;
 
             //Draw horizontal axis
@@ -51,7 +54,7 @@ namespace TSP_Algorithms.Drawables
 
             if (_drawConvexHulls)
             {
-                canvas.StrokeColor = Colors.White;
+                canvas.StrokeColor = Colors.Black;
                 if (_convexHulls != null || _convexHulls.Count < 1)
                 {
                     List<Point> chPointstoDraw = new List<Point>();
@@ -68,14 +71,14 @@ namespace TSP_Algorithms.Drawables
                     int i = 0;
                     foreach (var ch in _convexHulls)
                     {
-                        canvas.StrokeColor = Colors.White;
+                        canvas.StrokeColor = Colors.Black;
                         foreach (var chpt in ch)
                         {
                             canvas.DrawCircle(chPointstoDraw[j], 3.0);
                             j++;
                         }
 
-                        canvas.StrokeColor = Colors.Pink;
+                        canvas.StrokeColor = Colors.Black;
                         for (int ii = i; ii < i + ch.Count - 1; ii++)
                         {
                             var p1 = chPointstoDraw[ii];
@@ -94,16 +97,9 @@ namespace TSP_Algorithms.Drawables
                 canvas.DrawCircle(ptd, 3.0);
             }
 
-            //if (_points.Count > 0)
-            //{
-            //    canvas.StrokeColor = Colors.Red;
-            //    Point homePointToDraw = CreatePointToDraw(_homePoint, virtualLength, minX, minY, dirtyRect);
-            //    canvas.DrawCircle(homePointToDraw, 3.0);
-            //}
-
             if (_drawLines)
             {
-                canvas.StrokeColor = Colors.Yellow;
+                canvas.StrokeColor = Colors.Black;
 
                 for (int i = 0; i < pointsToDraw.Count - 1; i++)
                 {
@@ -117,17 +113,14 @@ namespace TSP_Algorithms.Drawables
             if (points == null || points.Count == 0)
                 return new List<Point>();
 
-            //Find the bounding box of the original points
             double minX = points.Min(p => p.X);
             double maxX = points.Max(p => p.X);
             double minY = points.Min(p => p.Y);
             double maxY = points.Max(p => p.Y);
 
-            //Calculate the original width and height of the points
             double originalWidth = maxX - minX;
             double originalHeight = maxY - minY;
 
-            //If all points are at the same location, center a single point
             if (originalWidth == 0 && originalHeight == 0)
             {
                 return new List<Point>
@@ -139,18 +132,14 @@ namespace TSP_Algorithms.Drawables
         };
             }
 
-            // Calculate scale factors
             double scaleX = dirtyRect.Width / originalWidth;
             double scaleY = dirtyRect.Height / originalHeight;
 
-            // Use the smaller scale to maintain aspect ratio
             double scale = Math.Min(scaleX, scaleY);
 
-            // Calculate offsets to center the scaled points
             double centeredOffsetX = dirtyRect.Left + (dirtyRect.Width - (originalWidth * scale)) / 2;
             double centeredOffsetY = dirtyRect.Top + (dirtyRect.Height - (originalHeight * scale)) / 2;
 
-            // Transform points
             return points.Select(p => new Point(
                 centeredOffsetX + (p.X - minX) * scale,
                 centeredOffsetY + (originalHeight * scale) - (p.Y - minY) * scale

@@ -1,0 +1,8 @@
+[
+  {
+    "AlgoName": "AllConvexHullHeuristic",
+    "NumberOfPoints": 10000,
+    "ExecutionTimeMs": 523739,
+    "TotalDistance": 165106.921875
+  }
+]

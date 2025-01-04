@@ -11,7 +11,7 @@ namespace TSP_APP
         static List<Point> Points = new List<Point>();
         int NumOfPoints = 0;
         CoordinateAxisDrawable drawable;
-        List<string> AlgorithmNames = [BruteForce.Name, NearestNeighbour.Name, CircleMethod.Name, SingleConvexHullHeuristic.Name, AllConvexHullsHeuristic.Name, GeneticAlgorithm.Name];
+        List<string> AlgorithmNames = [SingleConvexHullHeuristic.Name, AllConvexHullsHeuristic.Name, GeneticAlgorithm.Name];
         List<string?> TSPFileNames = TSPParser.GetTspFileNames();
         ShortestPath currentPath = null;
         bool displayHullsBtnClicked = false;
@@ -30,18 +30,14 @@ namespace TSP_APP
         {
             Points.Clear();
 
-            //for (int i = 0; i < NumOfPoints; i++)
-            //{
-            //    Points.Add(Algorithms.GenerateRandomPoint(5));
-            //}
+            for (int i = 0; i < NumOfPoints; i++)
+            {
+                Points.Add(Algorithms.GenerateRandomPoint(5));
+            }
 
-            //drawable.UpdatePoints(Points, false, Points[0], false, null);
-            //graphicsView.Invalidate();
-            //UpdateLabels(0, Points.Count, 0, 0);
-
-            var benchmark = new AlgoBenchmark("C:\\Users\\badun\\OneDrive\\Documents\\TSP-APP\\TSP APP\\BenchmarkResults\\");
-            int[] pointCounts = new[] { 100, 500, 1000, 5000, 10000 };
-            benchmark.RunBenchmark(pointCounts, repetitionsPerCount: 1);
+            drawable.UpdatePoints(Points, false, Points[0], false, null);
+            graphicsView.Invalidate();
+            UpdateLabels(0, Points.Count, 0, 0);
         }
 
         async void DrawPathBtnClicked(object sender, EventArgs args)
@@ -129,10 +125,6 @@ namespace TSP_APP
             DrawPathBtn.IsEnabled = true;
         }
 
-        private async void NavigateBtnClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new AlgorithmTestPage());
-        }
 
         private void DisplayHullsBtnClicked(object sender, EventArgs e)
         {
@@ -181,12 +173,9 @@ namespace TSP_APP
                 {
                     return selectedAlgoIndex switch
                     {
-                        0 => new ShortestPath(BruteForce.RunAlgo(Points)),
-                        1 => new ShortestPath(NearestNeighbour.RunAlgo(Points)),
-                        2 => new ShortestPath(CircleMethod.RunAlgo(Points)),
-                        3 => new ShortestPath(SingleConvexHullHeuristic.RunAlgo(Points)),
-                        4 => new ShortestPath(AllConvexHullsHeuristic.RunAlgo(Points)),
-                        5 => new ShortestPath(GeneticAlgorithm.RunAlgo(Points)),
+                        0 => new ShortestPath(SingleConvexHullHeuristic.RunAlgo(Points)),
+                        1 => new ShortestPath(AllConvexHullsHeuristic.RunAlgo(Points)),
+                        2 => new ShortestPath(GeneticAlgorithm.RunAlgo(Points)),
                         _ => new ShortestPath((new List<Point> { new Point(0, 0) }, 0, new Point(0, 0))),
                     };
                 });

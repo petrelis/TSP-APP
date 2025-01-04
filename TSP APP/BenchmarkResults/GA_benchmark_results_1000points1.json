@@ -1,0 +1,32 @@
+[
+  {
+    "AlgoName": "GeneticAlgorithm",
+    "NumberOfPoints": 1000,
+    "ExecutionTimeMs": 5479092,
+    "TotalDistance": 52145.96875
+  },
+  {
+    "AlgoName": "GeneticAlgorithm",
+    "NumberOfPoints": 1000,
+    "ExecutionTimeMs": 5226361,
+    "TotalDistance": 53254.96484375
+  },
+  {
+    "AlgoName": "GeneticAlgorithm",
+    "NumberOfPoints": 1000,
+    "ExecutionTimeMs": 5203552,
+    "TotalDistance": 52465.19140625
+  },
+  {
+    "AlgoName": "GeneticAlgorithm",
+    "NumberOfPoints": 1000,
+    "ExecutionTimeMs": 4404165,
+    "TotalDistance": 52371.5546875
+  },
+  {
+    "AlgoName": "GeneticAlgorithm",
+    "NumberOfPoints": 1000,
+    "ExecutionTimeMs": 5387946,
+    "TotalDistance": 52439.87890625
+  }
+]

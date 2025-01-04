@@ -1,0 +1,32 @@
+[
+  {
+    "AlgoName": "ConvexHullGeneticAlgorithm",
+    "NumberOfPoints": 500,
+    "ExecutionTimeMs": 667541,
+    "TotalDistance": 36408.55859375
+  },
+  {
+    "AlgoName": "ConvexHullGeneticAlgorithm",
+    "NumberOfPoints": 500,
+    "ExecutionTimeMs": 1159436,
+    "TotalDistance": 36344.90234375
+  },
+  {
+    "AlgoName": "ConvexHullGeneticAlgorithm",
+    "NumberOfPoints": 500,
+    "ExecutionTimeMs": 1173769,
+    "TotalDistance": 37058.05859375
+  },
+  {
+    "AlgoName": "ConvexHullGeneticAlgorithm",
+    "NumberOfPoints": 500,
+    "ExecutionTimeMs": 1166786,
+    "TotalDistance": 36092.1796875
+  },
+  {
+    "AlgoName": "ConvexHullGeneticAlgorithm",
+    "NumberOfPoints": 500,
+    "ExecutionTimeMs": 1136692,
+    "TotalDistance": 37327.42578125
+  }
+]
